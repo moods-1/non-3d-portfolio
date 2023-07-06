@@ -26,9 +26,9 @@ const App = () => {
 			<StarsCanvas />
 		</div>,
 	];
-	
-	Mixpanel.track('Portfolio app accessed.', {
-		action: 'Portfolio app accessed.',
+
+	Mixpanel.track('3D portfolio app accessed.', {
+		action: '3D portfolio app accessed.',
 	});
 
 	return (
