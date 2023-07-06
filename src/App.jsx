@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
+import { Mixpanel } from './components/Mixpanel';
 import {
 	About,
 	Contact,
@@ -25,6 +26,10 @@ const App = () => {
 			<StarsCanvas />
 		</div>,
 	];
+	
+	Mixpanel.track('Portfolio app accessed.', {
+		action: 'Portfolio app accessed.',
+	});
 
 	return (
 		<BrowserRouter>

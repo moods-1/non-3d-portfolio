@@ -224,3 +224,5 @@ const skills = [
 ];
 
 export { services, experiences, testimonials, projects, skills };
+	
+export const MIXPANEL_TOKEN = process.env.REACT_APP_MIXPANEL_TOKEN;
