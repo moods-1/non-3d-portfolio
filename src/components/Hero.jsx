@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
 import { Rotate360 } from '../assets';
 
 const image360Variants = {
@@ -43,7 +42,6 @@ const Hero = () => {
 					</motion.div>
 				</div>
 			</div>
-			<ComputersCanvas />
 		</section>
 	);
 };

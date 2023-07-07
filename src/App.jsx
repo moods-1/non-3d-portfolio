@@ -10,7 +10,6 @@ import {
 	Hero,
 	Navbar,
 	Projects,
-	StarsCanvas,
 } from './components';
 
 const App = () => {
@@ -25,7 +24,6 @@ const App = () => {
 		<Testimonials />,
 		<div className='relative z-0'>
 			<Contact />
-			<StarsCanvas />
 		</div>,
 	];
 
