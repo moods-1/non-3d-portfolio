@@ -6,6 +6,7 @@ import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import { formValidator2 } from '../utils/helperFunctions';
 
 const Contact = () => {
 	const [message, setMessage] = useState({});
@@ -20,7 +21,14 @@ const Contact = () => {
 	const handleChange = (e) => {
 		const { target } = e;
 		const { name, value } = target;
-		setForm((prevState) => ({ ...prevState, [name]: value }));
+		console.log({ name });
+		let localValue;
+		if (name !== 'email') {
+			localValue = value.replace(/\s{2,}/g, ' ').trimStart();
+		} else {
+			localValue = value.replace(/\s+/g, '').trimStart();
+		}
+		setForm((prevState) => ({ ...prevState, [name]: localValue }));
 	};
 
 	const handleSubmit = (e) => {
@@ -34,6 +42,14 @@ const Contact = () => {
 			}, 4000);
 		};
 
+		const validatedData = formValidator2(form);
+		for (let i = 0; i < validatedData.length; i++){
+			if (!validatedData[i].returnBool) {
+				setLoading(false);
+				return messageHandler(validatedData[i].returnText, 'bg-red-500');
+			}
+		}
+		
 		emailjs
 			.sendForm(
 				process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -69,7 +85,7 @@ const Contact = () => {
 		>
 			<motion.div
 				variants={slideIn('left', 'tween', 0.2, 1)}
-				className='flex-[0.75] bg-black p-8 rounded-md border border-slate-900'
+				className='flex-[0.75] bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900'
 			>
 				<p className={styles.sectionSubText}>Get in touch</p>
 				<h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -80,9 +96,7 @@ const Contact = () => {
 						<input
 							type='text'
 							name='name'
-							// required
-							// minLength={3}
-							// maxLength={30}
+							required
 							value={form.name}
 							onChange={handleChange}
 							placeholder='Enter your name'
@@ -92,13 +106,12 @@ const Contact = () => {
 					<label className='flex flex-col'>
 						<span className='text-white font-medium mb-4'>Your email</span>
 						<input
-							type='email'
+							type='text'
 							name='email'
-							// required
+							required
 							value={form.email}
 							onChange={handleChange}
 							placeholder='Enter your email'
-							pattern='^\w+([\.-]?\w+)*@[a-z]+\.[a-z]{2,3}'
 							title='Please enter a valid email e.g. your@email.xxx'
 							className='py-4 px-6 placeholder:text-gray-500 text-white rounded-lg outline-none border-none font-medium'
 						/>
@@ -106,11 +119,9 @@ const Contact = () => {
 					<label className='flex flex-col'>
 						<span className='text-white font-medium mb-4'>Your Message</span>
 						<textarea
-							rows={7}
+							rows={4}
 							name='message'
-							// required
-							// minLength={10}
-							// maxLength={200}
+							required
 							value={form.message}
 							onChange={handleChange}
 							placeholder="Let's talk ..."
@@ -118,7 +129,7 @@ const Contact = () => {
 						/>
 					</label>
 					{message.text ? (
-						<div className={`${message.color} rounded-md p-3`}>
+						<div className={`${message.color} text-[14px] rounded-md p-3`}>
 							<span>{message.text}</span>
 						</div>
 					) : (

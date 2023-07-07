@@ -4,7 +4,7 @@ import { skills } from '../constants';
 
 const Skills = () => {
 	return (
-		<div className='flex justify-start flex-wrap text-white mt-[80px]'>
+		<div className='flex justify-center xs:justify-start flex-wrap text-white mt-[80px]'>
 			{skills.map(({ img, skill, color, level }, index) => (
 				<div
 					key={index}

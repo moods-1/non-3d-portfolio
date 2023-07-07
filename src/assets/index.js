@@ -24,6 +24,11 @@ import webflix from './webflix.png';
 import dashboard from './dashboard.png';
 import covid from './covid.png';
 
+// Testimonials
+
+import Herman from './testimonials/herman-kwayu.jpg';
+import Gideon from './testimonials/gideon-bamuleseyo.jpg';
+
 export {
 	logo,
 	github,
@@ -47,4 +52,6 @@ export {
 	dashboard,
 	covid,
 	Rotate360,
+	Herman,
+	Gideon,
 };

@@ -16,6 +16,8 @@ import {
 	webflix,
 	dashboard,
 	covid,
+	Herman,
+	Gideon,
 } from '../assets';
 
 export const navLinks = {
@@ -35,9 +37,14 @@ export const navLinks = {
 		index: 3,
 	},
 	4: {
+		id: 'testimonials',
+		title: 'Testimonials',
+		index: 4,
+	},
+	5: {
 		id: 'contact',
 		title: 'Contact',
-		index: 4,
+		index: 5,
 	},
 };
 
@@ -75,28 +82,21 @@ const experiences = [
 
 const testimonials = [
 	{
-		testimonial:
-			'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-		name: 'Sara Lee',
-		designation: 'CFO',
-		company: 'Acme Co',
-		image: 'https://randomuser.me/api/portraits/women/4.jpg',
+		testimonial: `Whether it's bringing designs to life or tackling complex backend challenges, Carl consistently exceeds expectations and delivers outstanding results.`,
+		name: 'Herman Kwayu',
+		designation: 'Sr.Project Manager',
+		company: 'Ramani Corp.',
+		image: Herman,
+		linkedIn: 'https://tz.linkedin.com/in/herman-kwayu-044733135',
 	},
 	{
 		testimonial:
-			"I've never met a web developer who truly cares about their clients' success like Rick does.",
-		name: 'Chris Brown',
-		designation: 'COO',
-		company: 'DEF Corp',
-		image: 'https://randomuser.me/api/portraits/men/5.jpg',
-	},
-	{
-		testimonial:
-			"After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-		name: 'Lisa Wang',
-		designation: 'CTO',
-		company: '456 Enterprises',
-		image: 'https://randomuser.me/api/portraits/women/6.jpg',
+			'I find working with Carl to be enjoyable due to his qualities as an owner, his keen eye for detail, and his adeptness at asking clarifying questions.',
+		name: 'Gideon Bamuleseyo',
+		designation: 'Lead Web Developer',
+		company: 'Ramani Corp.',
+		image: Gideon,
+		linkedIn: 'https://www.linkedin.com/in/gideon-bamuleseyo-07b574119',
 	},
 ];
 
@@ -224,5 +224,5 @@ const skills = [
 ];
 
 export { services, experiences, testimonials, projects, skills };
-	
+
 export const MIXPANEL_TOKEN = process.env.REACT_APP_MIXPANEL_TOKEN;

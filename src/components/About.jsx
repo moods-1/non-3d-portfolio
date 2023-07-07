@@ -64,7 +64,7 @@ const About = () => {
 				CV/Resume
 			</a>
 
-			<div className='mt-20 flex flex-wrap gap-10'>
+			<div className='mt-20 flex flex-wrap gap-10 justify-center xs:justify-start'>
 				{services.map((service, index) => (
 					<ServiceCard key={service.title} index={index} {...service} />
 				))}

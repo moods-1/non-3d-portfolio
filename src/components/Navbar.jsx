@@ -72,7 +72,7 @@ const Navbar = ({ elementsRef }) => {
 					</p>
 				</li>
 
-				<ul className='list-none hidden sm:flex flex-row gap-5'>
+				<ul className='list-none hidden md:flex flex-row gap-4'>
 					{Object.values(navLinks).map((nav) => (
 						<li
 							key={nav.id}
@@ -87,9 +87,9 @@ const Navbar = ({ elementsRef }) => {
 				</ul>
 				<ClickOutsideHandler
 					outsideFunction={() => setToggle(false)}
-					className='sm:hidden'
+					className='md:hidden'
 				>
-					<div className='sm:hidden relative flex flex-1 justify-end items-center'>
+					<div className='md:hidden relative flex flex-1 justify-end items-center'>
 						<img
 							src={toggle ? close : menu}
 							alt='menu'
