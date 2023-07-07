@@ -12,5 +12,4 @@ This is a collection of a few projects that demonstrate some of my programming s
 - JavaScript ES6
 - React JS
 - Framer Motion
-- React Three
 - Photoshop CC 2019
