@@ -2,7 +2,7 @@ import logo from './logo.png';
 import github from './github.png';
 import menu from './menu.svg';
 import close from './close.svg';
-import Rotate360 from './rotate-360.png';
+import CarlPc from './gaming-pc-cee.png';
 
 // Skills //
 import HTML from './skills/html.png';
@@ -51,7 +51,7 @@ export {
 	webflix,
 	dashboard,
 	covid,
-	Rotate360,
 	Herman,
 	Gideon,
+	CarlPc,
 };

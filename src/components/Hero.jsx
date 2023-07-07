@@ -1,25 +1,18 @@
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
-import { Rotate360 } from '../assets';
+import { CarlPc } from '../assets';
 
-const image360Variants = {
-	visible: {
-		opacity: [0, 0.5, 1, 0.5, 0],
-		transition: { duration: 2, repeat: Infinity },
-	},
-};
 const Hero = () => {
 	return (
 		<section className={`relative w-full h-screen mx-auto`}>
 			<div
-				className={`absolute inset-0 top-[70px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+				className={`top-[70px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
 			>
 				<div className='flex flex-col justify-center items-center mt-5'>
 					<div className='w-5 h-5 rounded-full bg-purple' />
 					<div className='w-1 sm:h-80 h-40 violet-gradient' />
 				</div>
-
 				<div>
 					<h1 className={`${styles.heroHeadText} text-white`}>
 						Hi, I'm <span className='text-purple'>Carl</span>
@@ -29,19 +22,21 @@ const Hero = () => {
 						<br className='sm:block hidden' /> that generate memorable UI/UX
 						experiences.
 					</p>
-					<motion.div
-						variants={image360Variants}
-						animate='visible'
-						className='text-center w-full my-5'
-					>
-						<img
-							src={Rotate360}
-							alt='rotate-360'
-							className='w-12 h-12 mx-auto'
-						/>
-					</motion.div>
 				</div>
 			</div>
+			<div className='absolute top-0 right-0 hidden xl:block'>
+				<a href=' https://carl-3d-portfolio.web.app' rel='noopener noreferrer'>
+					<button className='bg-purple w-[180px] py-1 rounded-md animate-pulse'>
+						3D Site *
+					</button>
+				</a>
+				<p className='text-[12px] mt-1'>* Recommended for desktops</p>
+			</div>
+			<img
+				src={CarlPc}
+				alt='carl-pc'
+				className='w-[100%] sm:w-[80%] absolute top-[50%] xs:top-[40%] left-[0%] sm:left-[10%]'
+			/>
 		</section>
 	);
 };

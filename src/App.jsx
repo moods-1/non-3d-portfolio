@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 
 import { Mixpanel } from './components/Mixpanel';
 import {
@@ -32,7 +31,7 @@ const App = () => {
 	});
 
 	return (
-		<BrowserRouter>
+
 			<div className='relative z-0 black-gradient-v'>
 				<Navbar elementsRef={elementsRef} />
 				{elements.map((element, index) => (
@@ -41,7 +40,6 @@ const App = () => {
 					</div>
 				))}
 			</div>
-		</BrowserRouter>
 	);
 };
 
