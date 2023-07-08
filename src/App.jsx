@@ -26,20 +26,19 @@ const App = () => {
 		</div>,
 	];
 
-	Mixpanel.track('3D portfolio app accessed.', {
-		action: '3D portfolio app accessed.',
+	Mixpanel.track('Portfolio app accessed.', {
+		action: 'Portfolio app accessed.',
 	});
 
 	return (
-
-			<div className='relative z-0 black-gradient-v'>
-				<Navbar elementsRef={elementsRef} />
-				{elements.map((element, index) => (
-					<div key={index} ref={(el) => (elementsRef.current[index] = el)}>
-						{element}
-					</div>
-				))}
-			</div>
+		<div className='relative z-0 black-gradient-v'>
+			<Navbar elementsRef={elementsRef} />
+			{elements.map((element, index) => (
+				<div key={index} ref={(el) => (elementsRef.current[index] = el)}>
+					{element}
+				</div>
+			))}
+		</div>
 	);
 };
 
