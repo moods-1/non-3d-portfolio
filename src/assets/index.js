@@ -28,7 +28,7 @@ import covid from './covid.png';
 
 import Herman from './testimonials/herman-kwayu.jpg';
 import Gideon from './testimonials/gideon-bamuleseyo.jpg';
-
+import Debbie from './testimonials/debbie-adejumo.jpg';
 export {
 	logo,
 	github,
@@ -53,5 +53,6 @@ export {
 	covid,
 	Herman,
 	Gideon,
+	Debbie,
 	CarlPc,
 };

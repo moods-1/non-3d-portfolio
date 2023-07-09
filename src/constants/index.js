@@ -18,6 +18,7 @@ import {
 	covid,
 	Herman,
 	Gideon,
+	Debbie,
 } from '../assets';
 
 export const navLinks = {
@@ -97,6 +98,14 @@ const testimonials = [
 		company: 'Ramani Corp.',
 		image: Gideon,
 		linkedIn: 'https://www.linkedin.com/in/gideon-bamuleseyo-07b574119',
+	},
+	{
+		testimonial: `As a Product Designer, Carl has been one of the best Front-End Engineers I’ve had the privilege to work with. Carl’s attention to detail is remarkable.`,
+		name: 'Debbie Adejumo',
+		designation: 'UX Design Lead',
+		company: 'Ramani Corp.',
+		image: Debbie,
+		linkedIn: 'https://www.linkedin.com/in/debbie-adejumo',
 	},
 ];
 
