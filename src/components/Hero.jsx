@@ -1,6 +1,6 @@
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
-import { CarlPc } from '../assets';
+import { CarlPc, Geo3D } from '../assets';
 
 const Hero = () => {
 	return (
@@ -25,7 +25,8 @@ const Hero = () => {
 			</div>
 			<div className='absolute top-0 right-0 hidden xl:block'>
 				<a href=' https://carl-3d-portfolio.web.app' rel='noopener noreferrer'>
-					<button className='bg-purple w-[180px] py-1 rounded-md animate-pulse'>
+					<button className='bg-purple w-[180px] flex justify-center items-center py-1 rounded-md animate-pulse'>
+						<div className='w-[20px] h-[20px] mr-2 bg-contain' style={{ backgroundImage: `url(${Geo3D})` }} />
 						3D Site *
 					</button>
 				</a>

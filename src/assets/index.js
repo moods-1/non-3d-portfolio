@@ -3,6 +3,7 @@ import github from './github.png';
 import menu from './menu.svg';
 import close from './close.svg';
 import CarlPc from './gaming-pc-cee.png';
+import Geo3D from './3d-geo.gif';
 
 // Skills //
 import HTML from './skills/html.png';
@@ -55,4 +56,5 @@ export {
 	Gideon,
 	Debbie,
 	CarlPc,
+	Geo3D,
 };

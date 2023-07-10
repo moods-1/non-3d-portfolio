@@ -39,7 +39,10 @@ const Testimonial = ({ value }) => {
 	return (
 		<>
 			{large && (
-				<button onClick={() => setShowLarge(!showLarge)} className='absolute top-[35px] text-[22px] font-bold right-10'>
+				<button
+					onClick={() => setShowLarge(!showLarge)}
+					className='absolute top-[35px] text-[22px] font-bold right-10'
+				>
 					{showLarge ? '-' : '+'}
 				</button>
 			)}
