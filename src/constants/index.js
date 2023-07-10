@@ -83,7 +83,7 @@ const experiences = [
 
 const testimonials = [
 	{
-		testimonial: `Whether it's bringing designs to life or tackling complex backend challenges, Carl consistently exceeds expectations and delivers outstanding results.`,
+		testimonial: "Whether it's bringing designs to life or tackling complex backend challenges, Carl consistently exceeds expectations and delivers outstanding results.\nWhat sets Carl apart is his dedication to going above and beyond. He's not only mastered front-end development but also expanded his skills to become a proficient backend engineer. This versatility is invaluable to our team as he seamlessly transitions between tasks and consistently achieves exceptional results.",
 		name: 'Herman Kwayu',
 		designation: 'Sr.Project Manager',
 		company: 'Ramani Corp.',
@@ -92,7 +92,7 @@ const testimonials = [
 	},
 	{
 		testimonial:
-			'I find working with Carl to be enjoyable due to his qualities as an owner, his keen eye for detail, and his adeptness at asking clarifying questions.',
+			'I find working with Carl to be enjoyable due to his qualities as an owner, his keen eye for detail, and his adeptness at asking clarifying questions.',
 		name: 'Gideon Bamuleseyo',
 		designation: 'Lead Web Developer',
 		company: 'Ramani Corp.',
@@ -100,7 +100,7 @@ const testimonials = [
 		linkedIn: 'https://www.linkedin.com/in/gideon-bamuleseyo-07b574119',
 	},
 	{
-		testimonial: `As a Product Designer, Carl has been one of the best Front-End Engineers I’ve had the privilege to work with. Carl’s attention to detail is remarkable.`,
+		testimonial: `As a Product Designer, Carl has been one of the best Front-End Engineers I've had the privilege to work with. Carl's attention to detail is remarkable. He is able to effortlessly transform design specifications into flawless code with speed & accuracy. Carl has the amazing ability to absorb feedback and implement changes seamlessly. Carl is a true team player, and any product & engineering team would be incredibly fortunate to have him on their side! `,
 		name: 'Debbie Adejumo',
 		designation: 'UX Design Lead',
 		company: 'Ramani Corp.',

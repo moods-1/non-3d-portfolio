@@ -20,15 +20,15 @@ export const validatorText = (target, min, max) => {
 };
 
 export const generateReturntext = (pattern, patternText, key, min, max) => {
-    return pattern ? patternText : validatorText(key, min, max);
-}
+	return pattern ? patternText : validatorText(key, min, max);
+};
 
 export const formValidator2 = (formObject) => {
 	const returnValue = Object.entries(formObject).map(([key, value], index) => {
 		let returnBool;
 		const validator = VALIDATOR_OBJECT[key] || { min: 0, max: 1 };
-        const { min, max, pattern, patternText } = validator;
-        let returnText = generateReturntext(pattern, patternText, key, min, max);
+		const { min, max, pattern, patternText } = validator;
+		let returnText = generateReturntext(pattern, patternText, key, min, max);
 		switch (key) {
 			case 'name':
 				returnBool = value.length >= min && value.length <= max;
@@ -69,4 +69,17 @@ export const formValidator = (target, value) => {
 			break;
 	}
 	return { returnBool, returnText };
+};
+
+export const testimonialSetter = (value) => {
+	const testimonialLength = value.length;
+	const cutLength = 152;
+	if (testimonialLength > cutLength) {
+		const cutTestimonial = value.slice(0, 152);
+		const cutPoint = cutTestimonial.lastIndexOf('.') + 1;
+		const shortTestimonial = value.slice(0, cutPoint);
+		return [true, shortTestimonial];
+	} else {
+		return [false, value];
+	}
 };

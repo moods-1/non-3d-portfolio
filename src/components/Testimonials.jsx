@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 import { testimonials } from '../constants';
+import { testimonialSetter } from '../utils/helperFunctions';
 
 const ProfileSetter = ({ person, profile, linkedIn }) => {
 	const image = (
@@ -32,6 +33,23 @@ const ProfileSetter = ({ person, profile, linkedIn }) => {
 	);
 };
 
+const Testimonial = ({ value }) => {
+	const [showLarge, setShowLarge] = useState(false);
+	const [large, text] = testimonialSetter(value);
+	return (
+		<>
+			{large && (
+				<button onClick={() => setShowLarge(!showLarge)} className='absolute top-[35px] text-[22px] font-bold right-10'>
+					{showLarge ? '-' : '+'}
+				</button>
+			)}
+			<p className='text-white tracking-wider text-[15px] min-h-[220px] break-normal sm:text-[18px]'>
+				{showLarge ? value : text}
+			</p>
+		</>
+	);
+};
+
 const FeedbackCard = ({
 	index,
 	testimonial,
@@ -48,10 +66,7 @@ const FeedbackCard = ({
 		<p className='text-white font-black text-[48px]'>"</p>
 
 		<div className='mt-1'>
-			<p className='text-white tracking-wider text-[15px] min-h-[220px] break-normal sm:text-[18px]'>
-				{testimonial}
-			</p>
-
+			<Testimonial value={testimonial} />
 			<div className='mt-4 flex justify-between items-center gap-4 flex-wrap'>
 				<div className='flex-1 flex flex-col'>
 					<p className='text-white font-medium text-[16px]'>
