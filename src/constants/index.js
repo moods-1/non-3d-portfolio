@@ -15,10 +15,10 @@ import {
 	HtmlBrackets,
 	webflix,
 	dashboard,
-	covid,
 	Herman,
 	Gideon,
 	Debbie,
+	moodsU,
 } from '../assets';
 
 export const navLinks = {
@@ -83,7 +83,8 @@ const experiences = [
 
 const testimonials = [
 	{
-		testimonial: "Whether it's bringing designs to life or tackling complex backend challenges, Carl consistently exceeds expectations and delivers outstanding results.\nWhat sets Carl apart is his dedication to going above and beyond. He's not only mastered front-end development but also expanded his skills to become a proficient backend engineer. This versatility is invaluable to our team as he seamlessly transitions between tasks and consistently achieves exceptional results.",
+		testimonial:
+			"Whether it's bringing designs to life or tackling complex backend challenges, Carl consistently exceeds expectations and delivers outstanding results.\nWhat sets Carl apart is his dedication to going above and beyond. He's not only mastered front-end development but also expanded his skills to become a proficient backend engineer. This versatility is invaluable to our team as he seamlessly transitions between tasks and consistently achieves exceptional results.",
 		name: 'Herman Kwayu',
 		designation: 'Sr.Project Manager',
 		company: 'Ramani Corp.',
@@ -110,6 +111,36 @@ const testimonials = [
 ];
 
 const projects = [
+	{
+		name: 'Moods U Online',
+		description:
+			'An online university for software engineering. Users can browse, and purchase courses with Stripe. A PDF invoice is downloaded when a purchase is made.',
+		tags: [
+			{
+				name: 'react',
+				color: 'text-cyan-400',
+			},
+			{
+				name: 'redux',
+				color: 'text-red-500',
+			},
+			{
+				name: 'stripe',
+				color: 'text-white',
+			},
+			{
+				name: 'mongodb',
+				color: 'text-green-500',
+			},
+			{
+				name: 'node',
+				color: 'text-green-500',
+			},
+		],
+		image: moodsU,
+		url: 'https://moods-u-online.web.app',
+		source_code_link: 'https://github.com/moods-1/moods-u-online',
+	},
 	{
 		name: 'Webflix',
 		description:
@@ -157,28 +188,6 @@ const projects = [
 		image: dashboard,
 		url: 'https://task-dashboard.web.app',
 		source_code_link: 'https://github.com/moods-1/draggable-task-flow',
-	},
-	{
-		name: 'Covid Tracker',
-		description:
-			'This app tracks past and current COVID-19 global data. It has many effective visual aids to help the end-user get a clear understanding quickly.',
-		tags: [
-			{
-				name: 'react',
-				color: 'text-cyan-400',
-			},
-			{
-				name: 'leaflet',
-				color: 'text-white',
-			},
-			{
-				name: 'chartjs',
-				color: 'text-red-500',
-			},
-		],
-		image: covid,
-		url: 'https://covid-19-tracker-global.web.app',
-		source_code_link: 'https://github.com/moods-1/covid-19-tracker',
 	},
 ];
 
