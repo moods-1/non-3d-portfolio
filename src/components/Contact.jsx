@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
 import { formValidator2 } from '../utils/helperFunctions';
 
 const Contact = () => {
@@ -42,13 +40,13 @@ const Contact = () => {
 		};
 
 		const validatedData = formValidator2(form);
-		for (let i = 0; i < validatedData.length; i++){
+		for (let i = 0; i < validatedData.length; i++) {
 			if (!validatedData[i].returnBool) {
 				setLoading(false);
 				return messageHandler(validatedData[i].returnText, 'bg-red-500');
 			}
 		}
-		
+
 		emailjs
 			.sendForm(
 				process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -78,17 +76,10 @@ const Contact = () => {
 	};
 
 	return (
-		<div
-			id='Contact'
-			className='xl:mt-12 overflow-hidden intersector relative'
-		>
-			<motion.div
-				variants={slideIn('left', 'tween', 0.2, 1)}
-				className='bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900 max-w-[500px]'
-			>
+		<div id='Contact' className='xl:mt-12 overflow-hidden intersector relative'>
+			<div className='bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900 max-w-[500px]'>
 				<p className={styles.sectionSubText}>Get in touch</p>
 				<h3 className={styles.sectionHeadText}>Contact.</h3>
-
 				<form onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
 					<label className='flex flex-col'>
 						<span className='text-white font-medium mb-4'>Your Name</span>
@@ -140,7 +131,7 @@ const Contact = () => {
 						</button>
 					)}
 				</form>
-			</motion.div>
+			</div>
 		</div>
 	);
 };

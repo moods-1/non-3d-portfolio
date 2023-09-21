@@ -3,14 +3,11 @@ import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
-import { motion } from 'framer-motion';
-
 import 'react-vertical-timeline-component/style.min.css';
 
 import { styles } from '../styles';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
-import { textVariant } from '../utils/motion';
 
 const ExperienceCard = ({ experience }) => {
 	return (
@@ -36,7 +33,7 @@ const ExperienceCard = ({ experience }) => {
 			<div>
 				<h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
 				<p
-					className='text-gray-500 text-[16px] font-semibold'
+					className='text-gray-300 text-[16px] font-semibold'
 					style={{ margin: 0 }}
 				>
 					{experience.company_name}
@@ -60,14 +57,14 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
 	return (
 		<div id='Experience'>
-			<motion.div variants={textVariant()}>
+			<div>
 				<p className={`${styles.sectionSubText} text-left`}>
 					What I have done so far
 				</p>
 				<h2 className={`${styles.sectionHeadText} text-left`}>
 					Work Experience.
 				</h2>
-			</motion.div>
+			</div>
 
 			<div className='mt-20 flex flex-col'>
 				<VerticalTimeline>
