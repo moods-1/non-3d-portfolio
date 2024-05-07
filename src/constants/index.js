@@ -170,7 +170,7 @@ const projects = [
 	{
 		name: 'Dashboard',
 		description:
-			'A drag and drop task management dashboard. Charts and graphs are available for clear performance visibility. The user can edit and add customers,tasks and users.',
+			'A drag and drop task management dashboard. Charts and graphs are available for clear performance visibility. The user can edit and add customers, tasks and users.',
 		tags: [
 			{
 				name: 'react',
