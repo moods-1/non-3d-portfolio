@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-// import { Mixpanel } from './components/Mixpanel';
+import { Mixpanel } from './components/Mixpanel';
 import {
 	About,
 	Contact,
@@ -26,9 +26,9 @@ const App = () => {
 		</div>,
 	];
 
-	// Mixpanel.track('Portfolio app accessed.', {
-	// 	action: 'Portfolio app accessed.',
-	// });
+	Mixpanel.track('Portfolio app accessed.', {
+		action: 'Portfolio app accessed.',
+	});
 
 	return (
 		<div className='relative z-0 black-gradient-v'>
