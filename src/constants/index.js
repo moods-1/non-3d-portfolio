@@ -15,6 +15,8 @@ import {
 	HtmlBrackets,
 	webflix,
 	dashboard,
+	herbNation,
+	pizzeria,
 	Herman,
 	Gideon,
 	Debbie,
@@ -184,10 +186,65 @@ const projects = [
 				name: 'mongodb',
 				color: 'text-green-500',
 			},
+			{
+				name: 'context',
+				color: 'text-red-500',
+			},
 		],
 		image: dashboard,
 		url: 'https://task-dashboard.web.app',
 		source_code_link: 'https://github.com/moods-1/draggable-task-flow',
+	},
+	{
+		name: 'Herb Nation',
+		description:
+			'Source for knowledge on herbs and their traditional medicinal uses. Foraging locations in the Americas are provided. ',
+		tags: [
+			{
+				name: 'next',
+				color: 'text-cyan-400',
+			},
+			{
+				name: 'tailwind',
+				color: 'text-white',
+			},
+			{
+				name: 'mongodb',
+				color: 'text-green-500',
+			},
+			{
+				name: 'cloundinary',
+				color: 'text-white',
+			},
+		],
+		image: herbNation,
+		url: 'https://herb-nation.vercel.app',
+		source_code_link: 'https://github.com/moods-1/herb-nation',
+	},
+	{
+		name: 'Pizzeria',
+		description: 'Ecommerce site for a gourmet mom and pop pizzeria.',
+		tags: [
+			{
+				name: 'react',
+				color: 'text-cyan-400',
+			},
+			{
+				name: 'context',
+				color: 'text-red-500',
+			},
+			{
+				name: 'node restapi',
+				color: 'text-white',
+			},
+			{
+				name: 'paypal',
+				color: 'text-green-500',
+			},
+		],
+		image: pizzeria,
+		url: 'https://pizzeria-moodi.web.app',
+		source_code_link: 'https://github.com/moods-1/pizzeria',
 	},
 ];
 
