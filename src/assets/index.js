@@ -26,6 +26,7 @@ import dashboard from './dashboard.png';
 import moodsU from './moods-u.png';
 import herbNation from './herb-nation.jpg';
 import pizzeria from './pizzeria-modi.jpg';
+import mbank from './mbank.png';
 
 // Testimonials
 
@@ -61,4 +62,5 @@ export {
 	CarlPc,
 	Geo3D,
 	moodsU,
+	mbank
 };

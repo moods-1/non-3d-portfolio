@@ -21,6 +21,7 @@ import {
 	Gideon,
 	Debbie,
 	moodsU,
+	mbank
 } from '../assets';
 
 export const navLinks = {
@@ -142,6 +143,32 @@ const projects = [
 		image: moodsU,
 		url: 'https://moods-u-online.web.app',
 		source_code_link: 'https://github.com/moods-1/moods-u-online',
+	},
+	{
+		name: 'MBank Financial',
+		description:
+			'An online banking app. Clients can move money between their accounts. They can also make payments, and view and filter transactions.',
+		tags: [
+			{
+				name: 'nextjs',
+				color: 'text-cyan-400',
+			},
+			{
+				name: 'typescript',
+				color: 'text-white',
+			},
+			{
+				name: 'redux',
+				color: 'text-red-500',
+			},
+			{
+				name: 'mongodb',
+				color: 'text-green-500',
+			},
+		],
+		image: mbank,
+		url: 'https://mbank-financial.vercel.app/login',
+		source_code_link: 'https://github.com/moods-1/mbank.git',
 	},
 	{
 		name: 'Webflix',
