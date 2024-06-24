@@ -12,6 +12,8 @@ import {
 	Vue,
 	SASS,
 	JQuery,
+	TypeScript,
+	NextJS,
 	HtmlBrackets,
 	webflix,
 	dashboard,
@@ -282,6 +284,18 @@ const skills = [
 		img: JavaScript,
 		skill: 'JavaScript',
 		color: 'rgba(255,255,0,0.2)',
+		level: '90%',
+	},
+	{
+		img: TypeScript,
+		skill: 'TypeScript',
+		color: 'rgba(30,144,255,0.2)',
+		level: '90%',
+	},
+	{
+		img: NextJS,
+		skill: 'Next.js',
+		color: 'rgba(255,255,255,0.3)',
 		level: '90%',
 	},
 	{

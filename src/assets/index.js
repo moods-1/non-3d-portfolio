@@ -19,6 +19,8 @@ import SASS from './skills/sass.png';
 import JQuery from './skills/jquery.png';
 import HtmlBrackets from './skills/html-brackets.png';
 import Tailwind from './skills/tailwind.png';
+import TypeScript from './skills/typescript.png';
+import NextJS from './skills/next-js.png';
 
 import ramani from './company/ramani-icon.png';
 import webflix from './webflix.png';
@@ -51,6 +53,8 @@ export {
 	SASS,
 	Tailwind,
 	JQuery,
+	TypeScript,
+	NextJS,
 	HtmlBrackets,
 	webflix,
 	dashboard,

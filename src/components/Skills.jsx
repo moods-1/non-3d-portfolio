@@ -18,14 +18,14 @@ const Skills = () => {
 					</div>
 					<div className='skills-skill'>
 						<p className='text-center'>{skill}</p>
-						<div className='skill-level'>
+						{/* <div className='skill-level'>
 							<div
 								className='skill-progress'
 								style={{ background: color, width: level }}
 							>
 								<p className='skill-percentage'>{level}</p>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			))}
