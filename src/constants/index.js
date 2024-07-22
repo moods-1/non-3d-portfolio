@@ -14,6 +14,7 @@ import {
 	JQuery,
 	TypeScript,
 	NextJS,
+	Docker,
 	HtmlBrackets,
 	webflix,
 	dashboard,
@@ -278,8 +279,6 @@ const projects = [
 ];
 
 const skills = [
-	{ img: HTML, skill: 'HTML', color: 'rgba(255,165,0,0.3)', level: '95%' },
-	{ img: CSS, skill: 'CSS', color: 'rgba(30,144,255,0.2)', level: '90%' },
 	{
 		img: JavaScript,
 		skill: 'JavaScript',
@@ -287,9 +286,22 @@ const skills = [
 		level: '90%',
 	},
 	{
+		img: JQuery,
+		skill: 'jQuery',
+		color: 'rgba(30,144,255,0.2)',
+		level: '75%',
+	},
+	{
 		img: TypeScript,
 		skill: 'TypeScript',
 		color: 'rgba(30,144,255,0.2)',
+		level: '90%',
+	},
+	{ img: Node, skill: 'Node JS', color: 'rgba(50,205,50,0.2)', level: '80%' },
+	{
+		img: ReactPic,
+		skill: 'React JS',
+		color: 'rgba(0,255,255,0.1)',
 		level: '90%',
 	},
 	{
@@ -298,11 +310,14 @@ const skills = [
 		color: 'rgba(255,255,255,0.3)',
 		level: '90%',
 	},
+	{ img: Vue, skill: 'Vue', color: 'rgba(50,205,50,0.2)', level: '80%' },
+	{ img: HTML, skill: 'HTML', color: 'rgba(255,165,0,0.3)', level: '95%' },
+	{ img: CSS, skill: 'CSS', color: 'rgba(30,144,255,0.2)', level: '90%' },
 	{
-		img: ReactPic,
-		skill: 'React JS',
-		color: 'rgba(0,255,255,0.1)',
-		level: '90%',
+		img: Tailwind,
+		skill: 'Tailwind',
+		color: 'rgba(30,144,255,0.2)',
+		level: '80%',
 	},
 	{
 		img: Bootstrap,
@@ -316,27 +331,15 @@ const skills = [
 		color: 'rgba(30,144,255,0.2)',
 		level: '85%',
 	},
-	{ img: Node, skill: 'Node JS', color: 'rgba(50,205,50,0.2)', level: '80%' },
+
+	{ img: SASS, skill: 'SASS', color: 'rgba(255,192,203,0.4)', level: '80%' },
 	{
 		img: MongoDB,
 		skill: 'MongoDB',
 		color: 'rgba(50,205,50,0.2)',
 		level: '80%',
 	},
-	{ img: Vue, skill: 'Vue', color: 'rgba(50,205,50,0.2)', level: '80%' },
-	{
-		img: Tailwind,
-		skill: 'Tailwind',
-		color: 'rgba(30,144,255,0.2)',
-		level: '80%',
-	},
-	{ img: SASS, skill: 'SASS', color: 'rgba(255,192,203,0.4)', level: '80%' },
-	{
-		img: JQuery,
-		skill: 'jQuery',
-		color: 'rgba(30,144,255,0.2)',
-		level: '75%',
-	},
+	{ img: Docker, skill: 'Docker', color: 'rgba(30,144,255,0.2)', level: '80%' },
 ];
 
 export { services, experiences, testimonials, projects, skills };

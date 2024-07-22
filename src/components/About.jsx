@@ -1,4 +1,5 @@
 import React from 'react';
+import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
@@ -13,19 +14,28 @@ const ServiceCard = ({ index, title, icon }) => (
 		className='p-[1px] shadow-card select-none'
 		id='about'
 	>
-		<div className='xs:w-[250px] w-full border border-slate-700 rounded-lg'>
-			<div className='bg-black rounded-lg py-5 px-12 min-h-[280px] max-w-[250px] flex justify-evenly items-center flex-col'>
-				<img
-					src={icon}
-					alt='web-development'
-					className='w-16 h-16 object-contain'
-				/>
+		<Tilt
+			className='xs:w-[250px] w-full border border-slate-700 rounded-lg'
+			options={{
+				max: 35,
+				scale: 1,
+				speed: 2000,
+			}}
+		>
+			<div className='xs:w-[250px] w-full border border-slate-700 rounded-lg'>
+				<div className='bg-black rounded-lg py-5 px-12 min-h-[280px] max-w-[250px] flex justify-evenly items-center flex-col'>
+					<img
+						src={icon}
+						alt='web-development'
+						className='w-16 h-16 object-contain'
+					/>
 
-				<h3 className='text-white text-[20px] font-bold text-center'>
-					{title}
-				</h3>
+					<h3 className='text-white text-[20px] font-bold text-center'>
+						{title}
+					</h3>
+				</div>
 			</div>
-		</div>
+		</Tilt>
 	</motion.div>
 );
 
