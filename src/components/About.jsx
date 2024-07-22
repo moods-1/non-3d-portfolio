@@ -57,7 +57,7 @@ const About = () => {
 				href='https://drive.google.com/file/d/1FMweVOQXkXZz1nYsNLvtqCW3XjGoBvT7/view?usp=sharing'
 				rel='noopener noreferrer'
 				target='_blank'
-				className='bg-purple inline-block py-2 px-8 rounded-md outline-none text-white min-w-[140px] mt-8 rounded-md'
+				className='bg-purple inline-block py-2 px-8 rounded-md outline-none text-white min-w-[140px] mt-8'
 			>
 				CV/Resume
 			</a>
