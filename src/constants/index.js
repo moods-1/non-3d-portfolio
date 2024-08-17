@@ -78,11 +78,13 @@ const experiences = [
 		iconBg: '#383E56',
 		date: 'April 2021 - June 2023',
 		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Create REST APIs with Node JS, Express, Mongoose, and various other modules and libraries.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
+			'Maintained and updated a dynamic web-based SaaS dashboard and public website with React JS, TypeScript, Redux, Google Maps, Highcharts, React Beautiful DND, and various UI libraries',
+			'Collaborated with the design team in the creation of Figma generated wireframes',
+			'Worked with an international team of 12 developers, designers and QA in an Agile environment',
+			'Refactored the application to improve the Lighthouse Performance score by 10%, while achieving a Best Practices score of 100%, and SEO of 92% ',
+			'Created REST APIs with Node JS, Express, Mongoose, and various other modules and libraries',
+			'Conducted code/pull request reviews',
+			'Created and progressed stories with Jira, and used Bitbucket for version control'
 		],
 	},
 ];
