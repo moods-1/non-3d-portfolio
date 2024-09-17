@@ -22,6 +22,7 @@ import Tailwind from './skills/tailwind.png';
 import TypeScript from './skills/typescript.png';
 import NextJS from './skills/next-js.png';
 import Docker from './skills/docker.png';
+import SQL from './skills/sql.png';
 
 import ramani from './company/ramani-icon.png';
 import webflix from './webflix.png';
@@ -57,6 +58,7 @@ export {
 	TypeScript,
 	NextJS,
 	Docker,
+	SQL,
 	HtmlBrackets,
 	webflix,
 	dashboard,

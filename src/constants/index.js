@@ -15,6 +15,7 @@ import {
 	TypeScript,
 	NextJS,
 	Docker,
+	SQL,
 	HtmlBrackets,
 	webflix,
 	dashboard,
@@ -300,6 +301,9 @@ const skills = [
 		level: '90%',
 	},
 	{ img: Node, skill: 'Node JS', color: 'rgba(50,205,50,0.2)', level: '80%' },
+	{
+		img: SQL, skill: 'SQL', color: 'rgba(30,144,255,0.2)', level: '90%' 
+	},
 	{
 		img: ReactPic,
 		skill: 'React JS',
