@@ -90,7 +90,7 @@ const Testimonials = () => {
 				<SectionHeader subText='What others say' headText='Testimonials.' />
 			</div>
 			<div
-				className={`-mt-20 pb-14 sm:px-16 px-6 pt-[60px] bg-neutral-900 flex flex-wrap gap-7 rounded-md`}
+				className={`-mt-20 pb-12 sm:px-12 px-5 pt-[60px] bg-neutral-900 flex flex-wrap gap-7 justify-around rounded-md`}
 			>
 				{testimonials.map((testimonial, index) => (
 					<FeedbackCard key={testimonial.name} index={index} {...testimonial} />
