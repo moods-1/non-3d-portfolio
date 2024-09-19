@@ -37,7 +37,8 @@ const Works = () => {
 					))}
 				</div>
 			) : (
-				<Marquee
+				<div className='max-w-[1920px] mx-auto'>
+					<Marquee
 					gradient={false}
 					className='overflow-y-visible py-10'
 					pauseOnHover
@@ -47,7 +48,8 @@ const Works = () => {
 					{projects.map((project, index) => (
 						<ProjectCard key={`project-${index}`} index={index} {...project} />
 					))}
-				</Marquee>
+						</Marquee>
+						</div>
 			)}
 		</div>
 	);

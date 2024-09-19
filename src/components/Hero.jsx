@@ -2,7 +2,7 @@ import { CarlPc, Geo3D } from '../assets';
 
 const Hero = () => {
 	return (
-		<div className='pt-20 bg-hero-pattern bg-cover bg-no-repeat bg-center h-screen relative w-full mx-auto'>
+		<div className='pt-20 bg-hero-pattern bg-cover bg-no-repeat bg-center h-screen relative w-full max-w-[1920px] mx-auto'>
 			<div className='max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5'>
 				<div className='flex flex-col justify-center items-center mt-5'>
 					<div className='w-5 h-5 rounded-full bg-purple' />
