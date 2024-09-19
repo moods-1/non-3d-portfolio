@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
 import ClickOutsideHandler from './ClickOutsideHandler';
@@ -31,10 +30,10 @@ const Navbar = ({ elementsRef }) => {
 				setScrolled(false);
 			}
 
-			// Custom intersection observer for active link setting. Could not get 
-			// get IntersectionObserver to work for this purpose. 
+			// Custom intersection observer for active link setting. Could not get
+			// get IntersectionObserver to work for this purpose.
 			elementsRef?.current?.forEach((el, idx) => {
-				if (scrollTop > el.offsetTop - 120 && scrollTop < elTops[idx + 1]) {
+				if (scrollTop > el.offsetTop - 500 && scrollTop < elTops[idx + 1]) {
 					if (idx in navLinks) {
 						setActive(navLinks[idx].title);
 					} else setActive('');
@@ -51,9 +50,7 @@ const Navbar = ({ elementsRef }) => {
 
 	return (
 		<nav
-			className={`${
-				styles.paddingX
-			} w-full flex items-center py-5 fixed top-0 z-20  select-none ${
+			className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20  select-none ${
 				scrolled ? 'bg-[rgba(0,0,0,0.9)]' : 'bg-transparent'
 			}`}
 		>

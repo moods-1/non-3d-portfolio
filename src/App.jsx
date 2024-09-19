@@ -14,16 +14,12 @@ import {
 const App = () => {
 	const elementsRef = useRef([]);
 	const elements = [
-		<div id='Hero' className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-			<Hero />
-		</div>,
+		<Hero />,
 		<About />,
 		<Experience />,
 		<Projects />,
 		<Testimonials />,
-		<div className='relative z-0'>
-			<Contact />
-		</div>,
+		<Contact />,
 	];
 
 	Mixpanel.track('Portfolio app accessed.', {
