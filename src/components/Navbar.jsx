@@ -50,11 +50,11 @@ const Navbar = ({ elementsRef }) => {
 
 	return (
 		<nav
-			className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20  select-none ${
+			className={`sm:px-10 px-6 w-full flex items-center py-5 fixed top-0 z-20  select-none ${
 				scrolled ? 'bg-[rgba(0,0,0,0.9)]' : 'bg-transparent'
 			}`}
 		>
-			<div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+			<div className='w-full flex justify-between items-center max-w-[1920px] mx-auto'>
 				<li
 					className='flex items-center gap-2'
 					onClick={() => {
@@ -93,7 +93,6 @@ const Navbar = ({ elementsRef }) => {
 							className='w-[28px] h-[28px] object-contain'
 							onClick={() => setToggle(!toggle)}
 						/>
-
 						<div
 							className={`${
 								!toggle ? 'hidden' : 'flex'

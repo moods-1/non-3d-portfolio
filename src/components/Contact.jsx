@@ -77,7 +77,7 @@ const Contact = () => {
 
 	return (
 		<div className='xl:mt-12 overflow-hidden intersector relative'>
-			<div className='bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900 max-w-[500px]'>
+			<div className='bg-[rgba(0,0,0,0.7)] p-8 rounded-md border border-slate-900 max-w-[500px] mx-auto'>
 			<SectionHeader subText="Get in touch" headText="Contact." />
 				<form onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
 					<label className='flex flex-col'>

@@ -27,7 +27,7 @@ const App = () => {
 	});
 
 	return (
-		<div className='relative z-0 black-gradient-v'>
+		<div className='relative z-0 black-gradient-v overflow-hidden'>
 			<Navbar elementsRef={elementsRef} />
 			{elements.map((element, index) => (
 				<div key={index} ref={(el) => (elementsRef.current[index] = el)}>
