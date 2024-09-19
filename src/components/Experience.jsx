@@ -56,7 +56,7 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
 	return (
-		<div id='Experience'>
+		<div className='intersector'>
 			<SectionHeader
 				subText='What I have done so far'
 				headText='Work Experience.'
@@ -75,4 +75,4 @@ const Experience = () => {
 	);
 };
 
-export default SectionWrapper(Experience, 'work');
+export default SectionWrapper(Experience, 'experience');
