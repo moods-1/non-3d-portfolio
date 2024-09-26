@@ -13,7 +13,7 @@ const Hero = () => {
 						Hi, I'm <span className='text-purple'>Carl</span>
 					</p>
 					<p className='hero-sub-text'>
-						I develop full-stack web applications{' '}
+						I develop full stack applications{' '}
 						<br className='sm:block hidden' /> that generate memorable UI/UX
 						experiences.
 					</p>
