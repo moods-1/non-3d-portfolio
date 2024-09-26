@@ -23,6 +23,7 @@ import TypeScript from './skills/typescript.png';
 import NextJS from './skills/next-js.png';
 import Docker from './skills/docker.png';
 import SQL from './skills/sql.png';
+import AWS from './skills/aws.png';
 
 import ramani from './company/ramani-icon.png';
 import webflix from './webflix.png';
@@ -59,6 +60,7 @@ export {
 	NextJS,
 	Docker,
 	SQL,
+	AWS,
 	HtmlBrackets,
 	webflix,
 	dashboard,
