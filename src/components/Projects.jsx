@@ -21,11 +21,11 @@ const Works = () => {
 				<SectionHeader subText='My work' headText='Projects.' />
 				<div className='w-full flex'>
 					<p className='mt-3 text-gray-300 text-[17px] max-w-3xl leading-[30px]'>
-						Following projects showcases my skills and experience through
+						The following projects showcases my skills and experience through
 						real-world examples of my work. Each project is briefly described
-						with links to code repositories and live demos in it. It reflects my
-						ability to solve complex problems, work with different technologies,
-						and manage projects effectively.
+						with, links to code repositories and live demos. It reflects my
+						abilities to solve complex problems, work with different
+						technologies, and manage projects effectively.
 					</p>
 				</div>
 			</div>
@@ -39,17 +39,21 @@ const Works = () => {
 			) : (
 				<div className='max-w-[1920px] mx-auto'>
 					<Marquee
-					gradient={false}
-					className='overflow-y-visible py-10'
-					pauseOnHover
-					autoFill
-					speed={70}
-				>
-					{projects.map((project, index) => (
-						<ProjectCard key={`project-${index}`} index={index} {...project} />
-					))}
-						</Marquee>
-						</div>
+						gradient={false}
+						className='overflow-y-visible py-10'
+						pauseOnHover
+						autoFill
+						speed={70}
+					>
+						{projects.map((project, index) => (
+							<ProjectCard
+								key={`project-${index}`}
+								index={index}
+								{...project}
+							/>
+						))}
+					</Marquee>
+				</div>
 			)}
 		</div>
 	);
