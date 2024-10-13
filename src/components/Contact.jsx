@@ -127,12 +127,12 @@ const Contact = () => {
 							</div>
 						) : (
 							<SlideAcross
-								buttonText='Send'
+								buttonText={loading ? 'Sending...' : 'Send'}
 								value=''
 								beforeClass='bg-black'
-								buttonClass='flex-1 py-1 min-w-44 border border-purple bg-purple rounded-md text-white border'
+								buttonClass='flex-1 py-2 min-w-44 border border-purple bg-purple rounded-md text-white border'
 								beforeImg={Mail}
-								slideSpeed={2200}
+								slideSpeed={2000}
 								buttonFunction={() => {}}
 								disabled={loading}
 							/>
