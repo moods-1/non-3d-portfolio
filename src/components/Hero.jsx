@@ -1,42 +1,57 @@
-import { CarlPc, Geo3D } from '../assets';
+import { Carl, Geo3D } from '../assets';
+import { RevealSlideOut } from './Buttons';
 
 const Hero = () => {
 	return (
-		<div className='pt-20 bg-hero-pattern bg-cover bg-no-repeat bg-center h-screen relative w-full max-w-[1920px] mx-auto'>
-			<div className='max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5'>
-				<div className='flex flex-col justify-center items-center mt-5'>
-					<div className='w-5 h-5 rounded-full bg-purple' />
-					<div className='w-1 sm:h-80 h-40 violet-gradient' />
+		<main className='flex items-center pt-20 bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+			<section className='flex justify-center flex-col sm:flex-row gap-10 flex-wrap relative'>
+				<div className='flex flex-1 items-center justify-end'>
+					<div className='w-full max-w-lg'>
+						<p className='hero-head-text'>
+							Hi, I'm <span className='text-purple'>Carl</span>
+						</p>
+						<p className='hero-sub-text'>
+							I develop full stack applications that generate memorable UI/UX
+							experiences.
+						</p>
+						<RevealSlideOut
+							buttonText='Spread Out Plus'
+							buttonClass='bg-black max-w-[160px] h-9 rounded-md !border-purple mt-8'
+							pseudoClass='bg-purple max-w-[160px] h-full whitespace-nowrap group-hover:text-purple z-10'
+							leftContent='Abou'
+							rightContent='t Me'
+						>
+							<a href='#about' className='z-0'>
+								Let's Go!
+							</a>
+						</RevealSlideOut>
+					</div>
 				</div>
-				<div>
-					<p className='hero-head-text'>
-						Hi, I'm <span className='text-purple'>Carl</span>
-					</p>
-					<p className='hero-sub-text'>
-						I develop full stack applications{' '}
-						<br className='sm:block hidden' /> that generate memorable UI/UX
-						experiences.
-					</p>
+				<div className='flex-1 flex justify-center items-center'>
+					<div className='rounded-full flex justify-center max-w-[288px] max-h-[288px] p-2  overflow-hidden bg-gradient-to-br from-purple to-gray-800'>
+						<div className='overflow-hidden flex items-center justify-center w-full bg-black bg-opacity-70 rounded-full'>
+							<img src={Carl} alt='carl' className='w-[95%] md:w-[100%]' />
+						</div>
+					</div>
 				</div>
-			</div>
-			<div className='absolute top-20 right-10 hidden xl:block'>
-				<a href=' https://carl-3d-portfolio.web.app' rel='noopener noreferrer'>
-					<button className='bg-purple w-[180px] flex justify-center items-center py-1 rounded-md animate-pulse'>
-						<div
-							className='w-[20px] h-[20px] mr-2 bg-contain'
-							style={{ backgroundImage: `url(${Geo3D})` }}
-						/>
-						3D Site *
-					</button>
-				</a>
-				<p className='text-[12px] mt-1'>* Recommended for desktops</p>
-			</div>
-			<img
-				src={CarlPc}
-				alt='carl-pc'
-				className='w-[95%] md:w-[60%] absolute top-[50%] xs:top-[50%] left-[5%] md:left-[25%]'
-			/>
-		</div>
+				<div className='absolute top-0 right-0 hidden xl:block'>
+					<a
+						href=' https://carl-3d-portfolio.web.app'
+						rel='noopener noreferrer'
+						className='action-button animate-pulse'
+					>
+						<span className='flex justify-center items-center'>
+							<div
+								className='w-[20px] h-[20px] mr-2 bg-contain'
+								style={{ backgroundImage: `url(${Geo3D})` }}
+							/>
+							3D Site *
+						</span>
+					</a>
+					<p className='text-[12px] mt-1'>* Recommended for desktops</p>
+				</div>
+			</section>
+		</main>
 	);
 };
 

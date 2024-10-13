@@ -16,14 +16,14 @@ const Works = () => {
 	}, []);
 
 	return (
-		<div className='intersector pt-24'>
-			<div className='px-6 sm:px-16 max-w-7xl mx-auto relative z-0 '>
+		<main id='projects' className='intersector'>
+			<div className='section-padding w-full max-w-7xl mx-auto relative z-0'>
 				<SectionHeader subText='My work' headText='Projects.' />
 				<div className='w-full flex'>
 					<p className='mt-3 text-gray-300 text-[17px] max-w-3xl leading-[30px]'>
 						The following projects showcase my skills and experience through
-						real-world examples of my work. Each project is briefly described, and 
-						has links to code repositories and live demos. They reflect my
+						real-world examples of my work. Each project is briefly described,
+						and has links to code repositories and live demos. They reflect my
 						abilities to solve complex problems, work with different
 						technologies, and manage projects effectively.
 					</p>
@@ -55,7 +55,7 @@ const Works = () => {
 					</Marquee>
 				</div>
 			)}
-		</div>
+		</main>
 	);
 };
 

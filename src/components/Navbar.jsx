@@ -1,27 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
 import ClickOutsideHandler from './ClickOutsideHandler';
 
-const Navbar = ({ elementsRef }) => {
-	const [active, setActive] = useState('');
+const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
-	const [selectedIndex, setSelectedIndex] = useState(0);
-
-	const handleLink = (title, idx) => {
-		setActive(title);
-		setSelectedIndex(idx);
-	};
+	const headerBg = scrolled ? 'bg-[rgba(0,0,0,0.9)]' : 'bg-transparent';
+	const mobileMenuBg = scrolled ? 'bg-[rgba(0,0,0,0.9)]' : 'bg-[#111111]';
+	const anchorRefs = useRef([]);
+	const mobileRefs = useRef([]);
 
 	useEffect(() => {
-		// For custom intersection observer for active link setting
-		const elTops = [];
-		elementsRef?.current?.forEach((el) => elTops.push(el.offsetTop));
-		elTops[elTops.length] = elTops[elTops.length - 1] + 300;
-		// Custom block ends
-
 		const handleScroll = () => {
 			const scrollTop = window.scrollY;
 			if (scrollTop > 30) {
@@ -30,36 +21,48 @@ const Navbar = ({ elementsRef }) => {
 				setScrolled(false);
 			}
 
-			// Custom intersection observer for active link setting. Could not get
-			// get IntersectionObserver to work for this purpose.
-			elementsRef?.current?.forEach((el, idx) => {
-				if (scrollTop > el.offsetTop - 500 && scrollTop < elTops[idx + 1]) {
-					if (idx in navLinks) {
-						setActive(navLinks[idx].title);
-					} else setActive('');
+			const mains = document.querySelectorAll('main');
+			let currentMain = '';
+			mains.forEach((main) => {
+				const sectionTop = main.offsetTop;
+				if (window.scrollY >= sectionTop - 50) {
+					currentMain = main.getAttribute('id');
+				}
+			});
+
+			anchorRefs.current.forEach((link) => {
+				link.classList.remove('active');
+				if (link.getAttribute('href') === '#' + currentMain) {
+					link.classList.add('active');
+				}
+			});
+			mobileRefs.current.forEach((link) => {
+				link.classList.remove('active');
+				if (link.getAttribute('href') === '#' + currentMain) {
+					link.classList.add('active');
 				}
 			});
 		};
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, [elementsRef]);
+	}, []);
 
 	useEffect(() => {
-		elementsRef?.current[selectedIndex].scrollIntoView();
-	}, [selectedIndex, elementsRef]);
+		const handleResize = () => {
+			setToggle(false);
+		};
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
 
 	return (
 		<nav
-			className={`sm:px-10 px-6 w-full flex items-center py-5 fixed top-0 z-20  select-none ${
-				scrolled ? 'bg-[rgba(0,0,0,0.9)]' : 'bg-transparent'
-			}`}
+			className={`sm:px-10 px-6 w-full flex items-center py-5 fixed top-0 z-20  select-none ${headerBg}`}
 		>
 			<div className='w-full flex justify-between items-center max-w-[1920px] mx-auto'>
 				<li
 					className='flex items-center gap-2'
 					onClick={() => {
-						setActive('');
-						setSelectedIndex(0);
 						window.scrollTo(0, 0);
 					}}
 				>
@@ -70,15 +73,11 @@ const Navbar = ({ elementsRef }) => {
 				</li>
 
 				<ul className='list-none hidden md:flex flex-row gap-4'>
-					{Object.values(navLinks).map((nav) => (
-						<li
-							key={nav.id}
-							className={`${
-								active === nav.title ? 'text-purple' : 'text-white'
-							} hover:text-purple text-[14px] font-medium cursor-pointer`}
-							onClick={() => handleLink(nav.title, nav.index)}
-						>
-							{nav.title}
+					{Object.values(navLinks).map(({ id, title }, idx) => (
+						<li key={id} className={`text-[15px]`}>
+							<a ref={(el) => (anchorRefs.current[idx] = el)} href={`#${id}`}>
+								{title}
+							</a>
 						</li>
 					))}
 				</ul>
@@ -86,7 +85,7 @@ const Navbar = ({ elementsRef }) => {
 					outsideFunction={() => setToggle(false)}
 					className='md:hidden'
 				>
-					<div className='md:hidden relative flex flex-1 justify-end items-center'>
+					<div className='md:hidden w-full relative flex flex-1 justify-end items-center'>
 						<img
 							src={toggle ? close : menu}
 							alt='menu'
@@ -96,21 +95,23 @@ const Navbar = ({ elementsRef }) => {
 						<div
 							className={`${
 								!toggle ? 'hidden' : 'flex'
-							} p-6 bg-purple absolute top-10 right-[-20px] mx-4 min-w-[140px] z-10 rounded-md`}
+							} p-6 absolute top-10 -right-[40px] mx-4 w-screen z-10 rounded-md ${mobileMenuBg}`}
 						>
-							<ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-								{Object.values(navLinks).map((nav) => (
+							<ul className='list-none flex justify-center items-center flex-1 flex-col gap-8'>
+								{Object.values(navLinks).map(({ id, title }, idx) => (
 									<li
-										key={nav.id}
-										className={`font-poppins font-medium cursor-pointer text-[16px] ${
-											active === nav.title ? 'text-[#000000]' : 'text-white'
-										}`}
+										key={id}
+										className={`font-poppins text-[16px]`}
 										onClick={() => {
-											setToggle(!toggle);
-											handleLink(nav.title, nav.index);
+											setToggle((prev) => !prev);
 										}}
 									>
-										{nav.title}
+										<a
+											ref={(el) => (mobileRefs.current[idx] = el)}
+											href={`#${id}`}
+										>
+											{title}
+										</a>
 									</li>
 								))}
 							</ul>

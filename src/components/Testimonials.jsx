@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import { SectionWrapper } from '../hoc';
 import { fadeIn } from '../utils/motion';
 import { testimonials } from '../constants';
 import { testimonialSetter } from '../utils/helperFunctions';
@@ -85,19 +84,25 @@ const FeedbackCard = ({
 
 const Testimonials = () => {
 	return (
-		<div className='intersector'>
-			<div className='min-h-[240px]'>
-				<SectionHeader subText='What others say' headText='Testimonials.' />
-			</div>
-			<div
-				className={`-mt-20 pb-12 sm:px-12 px-5 pt-[60px] bg-neutral-900 flex flex-wrap gap-7 justify-around rounded-md`}
-			>
-				{testimonials.map((testimonial, index) => (
-					<FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-				))}
-			</div>
-		</div>
+		<main id='testimonials' className='intersector'>
+			<section>
+				<div className='min-h-[240px]'>
+					<SectionHeader subText='What others say' headText='Testimonials.' />
+				</div>
+				<div
+					className={`-mt-20 pb-12 sm:px-12 px-5 pt-[60px] bg-neutral-900 flex flex-wrap gap-7 justify-around rounded-md`}
+				>
+					{testimonials.map((testimonial, index) => (
+						<FeedbackCard
+							key={testimonial.name}
+							index={index}
+							{...testimonial}
+						/>
+					))}
+				</div>
+			</section>
+		</main>
 	);
 };
 
-export default SectionWrapper(Testimonials, 'testimonials');
+export default Testimonials;

@@ -310,5 +310,33 @@ textarea {
 	@apply text-white font-black md:text-[60px] sm:text-[50px] xs:text-[25px] text-[25px];
 }
 .section-padding {
-	@apply sm:px-10 px-4 sm:py-16 py-10;
+	@apply sm:px-10 px-4 py-20;
+}
+nav ul li {
+	@apply font-medium text-white hover:text-purple cursor-pointer;
+}
+main {
+	@apply w-full max-w-[1920px] mx-auto relative z-0 min-h-screen;
+}
+section {
+	@apply section-padding w-full max-w-7xl mx-auto relative z-0 min-h-screen;
+}
+.action-button {
+	@apply overflow-hidden relative border border-purple bg-purple inline-block py-2 px-8 rounded-md outline-none text-white min-w-[140px] mt-8;
+}
+.action-button span {
+	@apply relative z-10;
+}
+.action-button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	transition: all 500ms;
+	background-color: #000;
+}
+.action-button:hover::before {
+	width: 100%;
 }
