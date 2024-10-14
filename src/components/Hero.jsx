@@ -28,9 +28,9 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className='flex-1 flex justify-center items-center'>
-					<div className='rounded-full flex justify-center max-w-[288px] max-h-[288px] p-2  overflow-hidden bg-gradient-to-br from-purple to-gray-800'>
+					<div className='rounded-full flex justify-center w-auto h-auto p-2  overflow-hidden bg-gradient-to-br from-purple to-gray-800'>
 						<div className='overflow-hidden flex items-center justify-center w-full bg-black bg-opacity-70 rounded-full'>
-							<img src={Carl} alt='carl' className='w-[95%] md:w-[100%]' />
+							<img src={Carl} alt='carl' className='w-[100%] max-w-[288px]' />
 						</div>
 					</div>
 				</div>
