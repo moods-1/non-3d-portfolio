@@ -2,13 +2,13 @@ import React, {useEffect, useState } from 'react';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 export function PortfolioCube(props) {
-	const [scale, setScale] = useState(.75);
+	const [scale, setScale] = useState(1);
 	const { nodes, materials } = useGLTF('/PortfolioCube.glb');
 
 	useEffect(() => {
 		const handleResize = () => {
 			const size = window.innerWidth;
-			if (size > 500) setScale(1);
+			if (size > 340) setScale(1);
 			else  setScale(.75)
 		}
 		window.addEventListener('resize', handleResize);

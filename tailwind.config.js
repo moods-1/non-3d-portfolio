@@ -27,12 +27,20 @@ module.exports = {
 			backgroundImage: {
 				'hero-pattern': "url('/src/assets/light.png')",
 			},
+			keyframes: {
+				'purple-pulse': {
+					'50%': {
+						'box-shadow': '0px 0px 10px #915EFF',
+					},
+				},
+			},
 			animation: {
 				'skill-pulse': {
 					'50%': {
-						'box-shadow': '0px 0px 10px #fff',
+						'box-shadow': '0px 0px 10px #915EFF',
 					},
 				},
+				'purple-pulse': 'purple-pulse 2s ease-in infinite',
 			},
 		},
 	},

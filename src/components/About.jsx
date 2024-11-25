@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Skills } from './';
+import { Rotate } from '../assets';
 import SectionHeader from './SectionHeader';
 import SkillsCanvas from './SkillsCanvas';
 
 const About = () => {
+	const [show360, setShow360] = useState(true);
+
+	useEffect(() => {
+		setShow360(window.innerWidth > 768);
+	}, []);
+
 	return (
 		<main id='about' className='intersector'>
 			<section className='relative'>
@@ -12,8 +19,8 @@ const About = () => {
 				<p className='mt-4 text-gray-300 text-[17px] max-w-3xl leading-[30px]'>
 					I'm a skilled software developer with experience in TypeScript and
 					JavaScript, and expertise in frameworks like React, Node.js, and
-					Three.js. I'm a quick learner and can collaborate closely with clients to
-					create efficient, scalable, and user-friendly solutions that solve
+					Three.js. I'm a quick learner and can collaborate closely with clients
+					to create efficient, scalable, and user-friendly solutions that solve
 					real-world problems. Let's work together to bring your ideas to life!
 				</p>
 				<a
@@ -24,7 +31,21 @@ const About = () => {
 				>
 					<span>CV/Resume</span>
 				</a>
-				<div className='relative w-full h-[40vh] sm:h-[75vh] pointer-events-none'>
+				<div className='w-full flex justify-center '>
+					{show360 && (
+						<img
+							className='animate-purple-pulse rounded-full p-1'
+							src={Rotate}
+							alt='Rotate'
+							width={60}
+							height={60}
+						/>
+					)}
+				</div>
+				<div
+					className='relative w-full h-[60vh] sm:h-[75vh] pointer-events-none'
+					onMouseDown={() => setShow360(false)}
+				>
 					<SkillsCanvas />
 				</div>
 				<Skills />

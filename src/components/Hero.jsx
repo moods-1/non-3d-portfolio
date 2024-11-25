@@ -1,4 +1,4 @@
-import { Carl, Geo3D } from '../assets';
+import { Carl } from '../assets';
 import { RevealSlideOut } from './Buttons';
 
 const Hero = () => {
@@ -33,22 +33,6 @@ const Hero = () => {
 							<img src={Carl} alt='carl' className='w-[100%] max-w-[288px]' />
 						</div>
 					</div>
-				</div>
-				<div className='absolute top-0 right-0 hidden xl:block'>
-					<a
-						href=' https://carl-3d-portfolio.web.app'
-						rel='noopener noreferrer'
-						className='action-button animate-pulse'
-					>
-						<span className='flex justify-center items-center'>
-							<div
-								className='w-[20px] h-[20px] mr-2 bg-contain'
-								style={{ backgroundImage: `url(${Geo3D})` }}
-							/>
-							3D Site *
-						</span>
-					</a>
-					<p className='text-[12px] mt-1'>* Recommended for desktops</p>
 				</div>
 			</section>
 		</main>

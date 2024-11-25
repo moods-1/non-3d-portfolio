@@ -7,10 +7,22 @@ import { MyRoom } from './CodingRoom';
 
 export default function SkillsCanvas() {
 	const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-		
+
 	const Loader = () => {
 		const { progress } = useProgress();
-		return <Html center>{progress.toFixed(1)}% loaded.</Html>;
+		return (
+			<Html center>
+				<div className='min-w-[140px] text-purple text-center text-md'>
+					<div className='w-full h-2 rounded-full overflow-hidden border'>
+						<div
+							className='h-full bg-purple'
+							style={{ width: `${progress}%` }}
+						/>
+					</div>
+					{progress.toFixed(1)}%
+				</div>
+			</Html>
+		);
 	};
 
 	useEffect(() => {
@@ -30,10 +42,9 @@ export default function SkillsCanvas() {
 			}}
 			className='relative h-svh'
 		>
-			<ambientLight intensity={1} position={[0, 5, 1]} />
+			<ambientLight intensity={2} position={[0, 5, 1]} />
 			<directionalLight intensity={1} position={[0, 5, 1]} />
 			<pointLight intensity={1} position={[0, 2, 1]} />
-			<spotLight intensity={1} position={[1, 2, 1]} />
 			<hemisphereLight intensity={1} position={[1, 2, 1]} />
 			<Suspense fallback={<Loader />}>
 				{isMobile ? <PortfolioCube /> : <MyRoom />}

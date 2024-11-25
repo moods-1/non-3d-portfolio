@@ -3,8 +3,8 @@ import github from './github.png';
 import menu from './menu.svg';
 import close from './close.svg';
 import Carl from './carl-no-fade.png';
-import Geo3D from './3d-geo.gif';
 import Mail from './mail.png';
+import Rotate from './rotate-360.png';
 
 // Skills //
 import HTML from './skills/html.png';
@@ -73,10 +73,10 @@ export {
 	Gideon,
 	Debbie,
 	Carl,
-	Geo3D,
 	moodsU,
 	mbank,
 	Mail,
 	ThreeJS,
-	Blender
+	Blender,
+	Rotate
 };
