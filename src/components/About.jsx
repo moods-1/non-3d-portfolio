@@ -6,10 +6,15 @@ import SectionHeader from './SectionHeader';
 import SkillsCanvas from './SkillsCanvas';
 
 const About = () => {
-	const [show360, setShow360] = useState(true);
+	const [show360, setShow360] = useState(window.innerWidth > 768);
 
 	useEffect(() => {
-		setShow360(window.innerWidth > 768);
+		const handleResize = () => {
+			const wWidth = window.innerWidth;
+			if(wWidth < 900) setShow360(false)
+		}
+		window.addEventListener('resize', handleResize)
+		return ()=> window.removeEventListener('resize', handleResize)
 	}, []);
 
 	return (
@@ -27,9 +32,17 @@ const About = () => {
 					href='https://drive.google.com/file/d/1FMweVOQXkXZz1nYsNLvtqCW3XjGoBvT7/view?usp=sharing'
 					rel='noopener noreferrer'
 					target='_blank'
-					className='action-button'
+					className='action-button mr-4'
 				>
 					<span>CV/Resume</span>
+				</a>
+				<a
+					href='https://carl-data-analyst.web.app'
+					rel='noopener noreferrer'
+					target='_blank'
+					className='action-button'
+				>
+					<span>Data Analytics</span>
 				</a>
 				<div className='w-full flex justify-center '>
 					{show360 && (
