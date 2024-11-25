@@ -25,6 +25,8 @@ import NextJS from './skills/next-js.png';
 import Docker from './skills/docker.png';
 import SQL from './skills/sql.png';
 import AWS from './skills/aws.png';
+import ThreeJS from './skills/three-js.png';
+import Blender from './skills/blender.png';
 
 import ramani from './company/ramani-icon.png';
 import webflix from './webflix.png';
@@ -74,5 +76,7 @@ export {
 	Geo3D,
 	moodsU,
 	mbank,
-	Mail
+	Mail,
+	ThreeJS,
+	Blender
 };

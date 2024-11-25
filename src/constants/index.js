@@ -26,7 +26,9 @@ import {
 	Gideon,
 	Debbie,
 	moodsU,
-	mbank
+	mbank,
+	ThreeJS,
+	Blender,
 } from '../assets';
 
 export const navLinks = {
@@ -85,7 +87,7 @@ const experiences = [
 			'Developed REST APIs with Node.js, Express.js, and MongoDB, collaborating with the design team to ensure seamless integration of Figma wireframes',
 			'Worked in an Agile environment with an international team of 12 developers, designers, and QA',
 			'Refactored the application to improve performance, SEO, and best practice scores, while conducting code/pull request reviews to ensure high-quality code and adherence to best practices',
-			'Utilized Jira for story management and Bitbucket for version control'
+			'Utilized Jira for story management and Bitbucket for version control',
 		],
 	},
 ];
@@ -302,7 +304,10 @@ const skills = [
 	},
 	{ img: Node, skill: 'Node JS', color: 'rgba(50,205,50,0.2)', level: '80%' },
 	{
-		img: SQL, skill: 'SQL', color: 'rgba(30,144,255,0.2)', level: '90%' 
+		img: SQL,
+		skill: 'SQL',
+		color: 'rgba(30,144,255,0.2)',
+		level: '90%',
 	},
 	{
 		img: ReactPic,
@@ -339,6 +344,18 @@ const skills = [
 	},
 
 	{ img: SASS, skill: 'SASS', color: 'rgba(255,192,203,0.4)', level: '80%' },
+	{
+		img: ThreeJS,
+		skill: 'Three JS',
+		color: 'rgba(255,255,255,0.4)',
+		level: '70%',
+	},
+	{
+		img: Blender,
+		skill: 'Blender',
+		color: 'rgba(30,144,255,0.2)',
+		level: '70%',
+	},
 	{
 		img: MongoDB,
 		skill: 'MongoDB',
