@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Html, useProgress } from '@react-three/drei';
 
 import { PortfolioCube } from './PortfolioCube';
-import { MyRoom } from './CodingRoom';
+import { CodingRoom } from './CodingRoom';
 
 export default function SkillsCanvas() {
 	const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -47,7 +47,7 @@ export default function SkillsCanvas() {
 			<pointLight intensity={1} position={[0, 2, 1]} />
 			<hemisphereLight intensity={1} position={[1, 2, 1]} />
 			<Suspense fallback={<Loader />}>
-				{isMobile ? <PortfolioCube /> : <MyRoom />}
+				{isMobile ? <PortfolioCube /> : <CodingRoom />}
 			</Suspense>
 		</Canvas>
 	);

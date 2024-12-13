@@ -3,7 +3,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 
 export function PortfolioCube(props) {
 	const [scale, setScale] = useState(1);
-	const { nodes, materials } = useGLTF('/PortfolioCube.glb');
+	const { nodes, materials } = useGLTF('models/PortfolioCube.glb');
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -34,4 +34,4 @@ export function PortfolioCube(props) {
 	);
 }
 
-useGLTF.preload('/PortfolioCube.glb');
+useGLTF.preload('models/PortfolioCube.glb');

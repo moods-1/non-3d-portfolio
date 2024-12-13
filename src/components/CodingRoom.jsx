@@ -1,19 +1,14 @@
 import React, { useEffect } from 'react';
 import { useGraph } from '@react-three/fiber';
-import {
-	useGLTF,
-	useAnimations,
-	OrbitControls,
-	useVideoTexture,
-} from '@react-three/drei';
+import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
 
-export function MyRoom(props) {
+export function CodingRoom(props) {
 	const group = React.useRef();
-	const { scene, animations } = useGLTF('/myRoom-limited.glb');
+	const { scene, animations } = useGLTF('models/coding.glb');
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
 	const { nodes, materials } = useGraph(clone);
-	const video = useVideoTexture('/CTV News.mp4');
+	const video = useVideoTexture('video/CTV News.mp4');
 	const { actions } = useAnimations(animations, group);
 
 	useEffect(() => {
@@ -22,12 +17,6 @@ export function MyRoom(props) {
 
 	return (
 		<>
-			<OrbitControls
-				maxPolarAngle={Math.PI / 2.5}
-				minPolarAngle={Math.PI / 3}
-				minDistance={5}
-				maxDistance={6}
-			/>
 			<group
 				ref={group}
 				{...props}
@@ -529,6 +518,7 @@ export function MyRoom(props) {
 						position={[1.17, 0.014, 0.958]}
 						rotation={[-Math.PI, 0, -Math.PI]}
 						scale={[0.045, 0.01, 0.045]}
+						
 					>
 						<mesh
 							name='Cylinder001'
@@ -597,4 +587,4 @@ export function MyRoom(props) {
 	);
 }
 
-useGLTF.preload('/myRoom-limited.glb');
+useGLTF.preload('models/coding.glb');

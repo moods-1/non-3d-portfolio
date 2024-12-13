@@ -33,6 +33,14 @@ module.exports = {
 						'box-shadow': '0px 0px 10px #915EFF',
 					},
 				},
+				'fade-in': {
+					'0%': {
+						translate: 'scale(0)',
+					},
+					'100%': {
+						opacity: 1
+					}
+				},
 			},
 			animation: {
 				'skill-pulse': {
@@ -41,6 +49,7 @@ module.exports = {
 					},
 				},
 				'purple-pulse': 'purple-pulse 2s ease-in infinite',
+				'fade-in': 'fade-in 2s ease-in 2s forwards',
 			},
 		},
 	},
