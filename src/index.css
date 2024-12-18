@@ -14,7 +14,7 @@
 }
 
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -22,118 +22,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #915eff;
+	background-color: #fff;
 	border-radius: 5px;
 	min-height: 150px;
-}
-
-.black-gradient {
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#434343,
-		#000000
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#434343,
-		#000000
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.black-gradient-v {
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to bottom,
-		#444444,
-		#ff0000
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to bottom,
-		#111111,
-		#000000
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.violet-gradient {
-	background: #804dee;
-	background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-	background: -webkit-linear-gradient(
-		-90deg,
-		#804dee 0%,
-		rgba(60, 51, 80, 0) 100%
-	);
-}
-
-.green-pink-gradient {
-	background: '#00cea8';
-	background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-	background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-}
-
-.orange-text-gradient {
-	background: #f12711; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to top,
-		#f12711,
-		#f5af19
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to top,
-		#f12711,
-		#f5af19
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.green-text-gradient {
-	background: #11998e; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to top,
-		#11998e,
-		#38ef7d
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to top,
-		#11998e,
-		#38ef7d
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.blue-text-gradient {
-	/* background: -webkit-linear-gradient(#eee, #333); */
-	background: #56ccf2; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to top,
-		#2f80ed,
-		#56ccf2
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to top,
-		#2f80ed,
-		#56ccf2
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.pink-text-gradient {
-	background: #ec008c; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to top,
-		#ec008c,
-		#fc6767
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to top,
-		#ec008c,
-		#fc6767
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 /* canvas- styles */
@@ -289,7 +180,7 @@ textarea {
 	background-color: #111111;
 }
 .active {
-	color: #915eff;
+	color: #626163;
 }
 .hero-head-text {
 	@apply font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[40px] text-[40px] lg:leading-[98px] mt-2;
@@ -307,7 +198,7 @@ textarea {
 	@apply sm:px-10 px-4 py-20;
 }
 nav ul li {
-	@apply font-medium text-white hover:text-purple cursor-pointer;
+	@apply font-medium text-white hover:text-[#626163] cursor-pointer;
 }
 main {
 	@apply w-full max-w-[1920px] mx-auto relative z-0 min-h-screen;
@@ -316,7 +207,7 @@ section {
 	@apply section-padding w-full max-w-7xl mx-auto relative z-0 min-h-screen;
 }
 .action-button {
-	@apply overflow-hidden relative border border-purple bg-purple inline-block py-2 px-8 rounded-md outline-none text-white min-w-[140px] mt-8;
+	@apply overflow-hidden relative border border-gray-700 bg-gray-700 inline-block py-2 px-8 rounded-md outline-none text-white min-w-[140px] mt-8;
 }
 .action-button span {
 	@apply relative z-10;

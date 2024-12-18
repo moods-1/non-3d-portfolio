@@ -4,7 +4,7 @@ import {
 	MeshReflectorMaterial,
 	Text,
 	useVideoTexture,
-	useGLTF,
+	useGLTF
 } from '@react-three/drei';
 import React, { useEffect, useRef, useCallback } from 'react';
 import * as THREE from 'three';
@@ -17,9 +17,9 @@ useGLTF.preload('fonts/Poppins-Black.ttf');
 export default function Hero3D() {
 	const controls = useRef();
 	const meshFitCameraHome = useRef();
-	const videoTexture = useVideoTexture('video/CTV News.mp4');
-	videoTexture.repeat.set(0.6, 0.6);
-
+	const videoTexture = useVideoTexture('video/Toronto.mp4');
+	const font = 'fonts/Poppins-Black.ttf';
+	
 	const intro = useCallback(async () => {
 		controls.current.dolly(-22); // Move the camera back 22
 		controls.current.smoothTime = 0.8; // Animation duration
@@ -47,22 +47,23 @@ export default function Hero3D() {
 			</mesh>
 			<group rotation-y={degToRad(30)}>
 				<Text
-					font={'fonts/Poppins-Black.ttf'}
+					font={font}
 					fontSize={0.6}
 					position={[-2, 0.3, 1]}
 					lineHeight={0.8}
+					outlineColor={'white'}
+					outlineWidth={.003}
 					textAlign='left'
 					anchorY={'bottom'}
 				>
 					CARL{'\n'}MOODIE
-					<meshBasicMaterial
-						color='white'
+					<meshStandardMaterial
 						side={THREE.DoubleSide}
 						map={videoTexture}
 					/>
 				</Text>
 				<Text
-					font={'fonts/Poppins-Black.ttf'}
+					font={font}
 					fontSize={0.15}
 					position={[-2, -0.4, 1]}
 					lineHeight={1.3}
@@ -75,7 +76,7 @@ export default function Hero3D() {
 				</Text>
 			</group>
 			<group rotation-y={degToRad(-25)} position-x={2} position-y={0.55}>
-				<CodingRoom scale={0.6} />
+				<CodingRoom scale={0.6} video={videoTexture} />
 			</group>
 			<mesh position-y={-0.58} rotation-x={-Math.PI / 2}>
 				<planeGeometry args={[100, 100]} />

@@ -130,7 +130,7 @@ const Contact = () => {
 								buttonText={loading ? 'Sending...' : 'Send'}
 								value=''
 								beforeClass='bg-black'
-								buttonClass='flex-1 py-2 min-w-44 border border-purple bg-purple rounded-md text-white border'
+								buttonClass='flex-1 py-2 min-w-44 border border-gray-700 bg-gray-700 rounded-md text-white border'
 								beforeImg={Mail}
 								slideSpeed={2000}
 								buttonFunction={() => {}}

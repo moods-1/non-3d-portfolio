@@ -1,5 +1,6 @@
 import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
+
 import CanvasLoader from './Loader';
 import Hero3D from './Hero3D';
 import { RevealSlideOut } from './Buttons';
@@ -13,7 +14,6 @@ const Hero = () => {
 	return (
 		<div className='h-screen w-full relative'>
 			<Canvas shadows camera={{ position: [0, 0, 8], fov: 34 }}>
-				<color attach='background' args={['#171720']} />
 				<ambientLight color={0xffffff} intensity={1} />
 				<directionalLight color={0xffffff} intensity={1} />
 				<Suspense fallback={<CanvasLoader handleProgress={handleProgress} />}>

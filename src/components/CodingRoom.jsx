@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useGraph } from '@react-three/fiber';
-import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
+import { useGLTF, useAnimations } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
 
 export function CodingRoom(props) {
@@ -8,7 +8,7 @@ export function CodingRoom(props) {
 	const { scene, animations } = useGLTF('models/coding.glb');
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
 	const { nodes, materials } = useGraph(clone);
-	const video = useVideoTexture('video/CTV News.mp4');
+	const { video } = props;
 	const { actions } = useAnimations(animations, group);
 
 	useEffect(() => {
@@ -366,7 +366,10 @@ export function CodingRoom(props) {
 							name='Cube_1'
 							geometry={nodes.Cube_1.geometry}
 							material={materials['Material.008']}
-						/>
+						>
+							<meshStandardMaterial color={0x000000} />
+						</mesh>
+
 						<mesh
 							name='Cube_2'
 							geometry={nodes.Cube_2.geometry}
@@ -518,7 +521,6 @@ export function CodingRoom(props) {
 						position={[1.17, 0.014, 0.958]}
 						rotation={[-Math.PI, 0, -Math.PI]}
 						scale={[0.045, 0.01, 0.045]}
-						
 					>
 						<mesh
 							name='Cylinder001'
