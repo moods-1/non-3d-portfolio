@@ -53,8 +53,8 @@ const Hero = () => {
 				camera={{ position: [0, 0, 8], fov: 34 }}
 				onMouseDown={() => setCanvasClicked(true)}
 			>
-				<ambientLight color={0xffffff} intensity={1} />
-				<directionalLight color={0xffffff} intensity={1} />
+				<ambientLight color={0xffffff} intensity={1.3} />
+				<directionalLight color={0xffffff} intensity={1.5} position={[2,1,10]} />
 				<Suspense fallback={<CanvasLoader handleProgress={handleProgress} />}>
 					<Hero3D />
 				</Suspense>
