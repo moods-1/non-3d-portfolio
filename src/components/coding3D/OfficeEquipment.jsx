@@ -9,7 +9,7 @@ export default function OfficeEquipment({ nodes, materials }) {
 				rotation={[0, Math.PI / 2, 0]}
 				scale={0.031}
 			/>
-			<group name='Aeron_Office_Chair' rotation={[0, 1.571, 0]}>
+			<group name='Aeron_Office_Chair' rotation={[0, 1.571, 0]} >
 				<mesh
 					name='Arm'
 					geometry={nodes.Arm.geometry}
