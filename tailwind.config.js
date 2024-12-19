@@ -1,3 +1,5 @@
+const { transform } = require('typescript');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{js,jsx}'],
@@ -24,9 +26,6 @@ module.exports = {
 				purple: '#915EFF',
 				'light-purple': '#c5abff',
 			},
-			backgroundImage: {
-				'hero-pattern': "url('/src/assets/light.png')",
-			},
 			keyframes: {
 				'purple-pulse': {
 					'50%': {
@@ -38,11 +37,17 @@ module.exports = {
 						translate: 'scale(0)',
 					},
 					'100%': {
-						opacity: 1
-					}
+						opacity: 1,
+					},
+				},
+				swipe: {
+					'50%': {
+						transform: 'translateX(40px)',
+					},
 				},
 			},
 			animation: {
+				swipe: 'swipe 2s ease-in-out infinite',
 				'skill-pulse': {
 					'50%': {
 						'box-shadow': '0px 0px 10px #915EFF',
