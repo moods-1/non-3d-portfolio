@@ -1,16 +1,15 @@
 import {
 	CameraControls,
-	Environment,
 	MeshReflectorMaterial,
 	Text,
 	useVideoTexture,
-	useGLTF
+	useGLTF,
 } from '@react-three/drei';
 import React, { useEffect, useRef, useCallback } from 'react';
 import * as THREE from 'three';
 import { degToRad } from 'three/src/math/MathUtils.js';
 
-import { CodingRoom } from './CodingRoom';
+import { CodingRoom } from './coding3D/CodingRoom';
 
 useGLTF.preload('fonts/Poppins-Black.ttf');
 
@@ -19,7 +18,7 @@ export default function Hero3D() {
 	const meshFitCameraHome = useRef();
 	const videoTexture = useVideoTexture('video/Toronto.mp4');
 	const font = 'fonts/Poppins-Black.ttf';
-	
+
 	const intro = useCallback(async () => {
 		controls.current.dolly(-22); // Move the camera back 22
 		controls.current.smoothTime = 0.8; // Animation duration
@@ -40,7 +39,13 @@ export default function Hero3D() {
 
 	return (
 		<>
-			<CameraControls ref={controls} minDistance={6} maxDistance={30}/>
+			<CameraControls
+				ref={controls}
+				minDistance={6}
+				maxDistance={30}
+				maxPolarAngle={Math.PI / 2}
+				minPolarAngle={Math.PI / 3.5}
+			/>
 			<mesh ref={meshFitCameraHome} position-z={1.5} visible={false}>
 				<boxGeometry args={[7.5, 2, 2]} />
 				<meshBasicMaterial color='orange' transparent opacity={0.5} />
@@ -52,15 +57,12 @@ export default function Hero3D() {
 					position={[-2, 0.3, 1]}
 					lineHeight={0.8}
 					outlineColor={'white'}
-					outlineWidth={.003}
+					outlineWidth={0.003}
 					textAlign='left'
 					anchorY={'bottom'}
 				>
 					CARL{'\n'}MOODIE
-					<meshStandardMaterial
-						side={THREE.DoubleSide}
-						map={videoTexture}
-					/>
+					<meshStandardMaterial side={THREE.DoubleSide} map={videoTexture} />
 				</Text>
 				<Text
 					font={font}
@@ -93,7 +95,6 @@ export default function Hero3D() {
 					metalness={0.5}
 				/>
 			</mesh>
-			<Environment preset='night' />
 		</>
 	);
 }
