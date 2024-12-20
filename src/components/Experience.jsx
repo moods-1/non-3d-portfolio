@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { motion } from 'framer-motion';
 
 import { experiences } from '../constants';
 import SectionHeader from './SectionHeader';
@@ -54,6 +55,7 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+	const [inView, setInView] = useState(false);
 	return (
 		<main id='experience' className='intersector'>
 			<section>
@@ -61,16 +63,23 @@ const Experience = () => {
 					subText='What I have done so far'
 					headText='Work Experience.'
 				/>
-				<div className='mt-10 flex flex-col'>
-					<VerticalTimeline>
-						{experiences.map((experience, index) => (
-							<ExperienceCard
-								key={`experience-${index}`}
-								experience={experience}
-							/>
-						))}
-					</VerticalTimeline>
-				</div>
+				<motion.div
+					whileInView={() => {
+						setTimeout(() => setInView(true), 1000);
+					}}
+					className='mt-10 flex flex-col'
+				>
+					{inView && (
+						<VerticalTimeline>
+							{experiences.map((experience, index) => (
+								<ExperienceCard
+									key={`experience-${index}`}
+									experience={experience}
+								/>
+							))}
+						</VerticalTimeline>
+					)}
+				</motion.div>
 			</section>
 		</main>
 	);
