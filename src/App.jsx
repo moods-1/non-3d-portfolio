@@ -11,9 +11,9 @@ import {
 } from './components';
 
 const App = () => {
-	// Mixpanel.track('Portfolio app accessed.', {
-	// 	action: 'Portfolio app accessed.',
-	// });
+	Mixpanel.track('Portfolio app accessed.', {
+		action: 'Portfolio app accessed.',
+	});
 
 	return (
 		<div className='relative z-0 black-gradient-v overflow-hidden'>
