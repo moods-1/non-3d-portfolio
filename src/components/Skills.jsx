@@ -16,19 +16,19 @@ const Skills = () => {
 		>
 			{skills.map(({ img, skill, color, level }, index) => (
 				<motion.div
-					initial={{ translateX: 3000 }}
-					animate={isInView && {
-						translateX: 0,
-						transition: {
-							type: 'left',
-							delay: index * .1,
-							duration: 1.5,
-							ease: "easeOut",
-						},
-					}}
+					initial={{ opacity: 0 }}
+					animate={
+						isInView && {
+							opacity: 1,
+							transition: {
+								delay: index * 0.1,
+								duration: 1.5,
+								ease: 'easeOut',
+							},
+						}
+					}
 					key={index}
 					className='relative h-[140px] w-[100px] m-[10px] skills-div'
-					// variants={slideIn('left', 'tween', index, 2)}
 				>
 					<div
 						className='w-[80px] h-[80px] mx-auto mt-0 mb-[5px] shadow-skill animate-pulse rounded-full cursor-pointer grid place-items-center '

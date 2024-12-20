@@ -65,7 +65,7 @@ const Experience = () => {
 				/>
 				<motion.div
 					whileInView={() => {
-						setTimeout(() => setInView(true), 1000);
+						setTimeout(() => setInView(true), 400);
 					}}
 					className='mt-10 flex flex-col'
 				>
