@@ -53,7 +53,7 @@ const Hero = () => {
 				camera={{ position: [0, 0, 8], fov: 34 }}
 				onMouseDown={() => setCanvasClicked(true)}
 			>
-				<ambientLight color={0xffffff} intensity={1.2} castShadow />
+				<ambientLight color={0xffffff} intensity={1.2} />
 				<directionalLight
 					color={0xffffff}
 					intensity={1.35}
