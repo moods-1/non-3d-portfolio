@@ -161,7 +161,13 @@ export default function OfficeEquipment({ nodes, materials }) {
 						receiveShadow
 						geometry={nodes.Cylinder002_1.geometry}
 						material={materials['Material.005']}
-					/>
+					>
+						<meshStandardMaterial
+							metalness={0.6}
+							roughness={0}
+							color={0x777777}
+						/>
+					</mesh>
 				</group>
 				<group
 					name='TableSupportFront'
@@ -182,7 +188,13 @@ export default function OfficeEquipment({ nodes, materials }) {
 						receiveShadow
 						geometry={nodes.Cylinder001_1.geometry}
 						material={materials['Material.005']}
-					/>
+					>
+						<meshStandardMaterial
+							metalness={0.6}
+							roughness={0}
+							color={0x777777}
+						/>
+					</mesh>
 				</group>
 				<mesh
 					name='TableTop'
@@ -192,7 +204,13 @@ export default function OfficeEquipment({ nodes, materials }) {
 					material={materials['Material.003']}
 					position={[0.8, 0.711, 0]}
 					scale={[0.462, 0.01, 1]}
-				/>
+				>
+					<meshStandardMaterial
+						metalness={0.6}
+						roughness={0}
+						color={0x000000}
+					/>
+				</mesh>
 			</group>
 			<group name='mouse'>
 				<mesh

@@ -15,10 +15,11 @@ export default function Walls({ nodes, materials }) {
 					receiveShadow
 					geometry={nodes.Cube.geometry}
 					material={materials['Wallbase.002']}
-				/>
+				>
+					<meshStandardMaterial color={0x444444} />
+				</mesh>
 				<mesh
 					name='Cube_1'
-					// castShadow
 					receiveShadow
 					geometry={nodes.Cube_1.geometry}
 					material={materials['WallInterior.002']}
@@ -43,14 +44,15 @@ export default function Walls({ nodes, materials }) {
 
 			<mesh
 				name='WindowFrame'
-				castShadow
 				receiveShadow
 				geometry={nodes.WindowFrame.geometry}
 				material={materials['Material.001']}
 				position={[-1.907, 1.65, -0.125]}
 				rotation={[-Math.PI, 0, -Math.PI]}
 				scale={[-0.138, -0.812, -0.887]}
-			/>
+			>
+				<meshStandardMaterial color={0xffffff} />
+			</mesh>
 			<mesh
 				name='WindowInterior'
 				castShadow
@@ -63,7 +65,6 @@ export default function Walls({ nodes, materials }) {
 			/>
 			<mesh
 				name='Baseboard'
-				castShadow
 				receiveShadow
 				geometry={nodes.Baseboard.geometry}
 				material={materials['Material.013']}
@@ -73,7 +74,6 @@ export default function Walls({ nodes, materials }) {
 			/>
 			<mesh
 				name='Baseboard2'
-				castShadow
 				receiveShadow
 				geometry={nodes.Baseboard2.geometry}
 				material={materials['Material.013']}

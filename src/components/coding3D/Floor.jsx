@@ -9,7 +9,9 @@ export default function Floor({ nodes, materials }) {
 				receiveShadow
 				geometry={nodes.Plane.geometry}
 				material={materials['Material.002']}
-			/>
+			>
+				<meshStandardMaterial metalness={1} roughness={0} color={0x777777} />
+			</mesh>
 			<mesh
 				name='Plane_1'
 				castShadow
