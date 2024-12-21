@@ -3,88 +3,15 @@ import React from 'react';
 export default function OfficeEquipment({ nodes, materials }) {
 	return (
 		<>
-			<group
-				name='Mouse'
-				position={[0.633, 0.724, 0.52]}
-				rotation={[0, Math.PI / 2, 0]}
-				scale={0.031}
-			/>
-			<group name='Aeron_Office_Chair' rotation={[0, 1.571, 0]} >
-				<mesh
-					name='Arm'
-					geometry={nodes.Arm.geometry}
-					material={materials['Matte Light Gray']}
-				/>
-				<mesh
-					name='Base002'
-					geometry={nodes.Base002.geometry}
-					material={materials['Matte Light Gray']}
-				/>
-				<mesh
-					name='Caster'
-					geometry={nodes.Caster.geometry}
-					material={materials['Matte Black']}
-					position={[-0.195, 0.064, 0.268]}
-				/>
-				<mesh
-					name='Frame008'
-					geometry={nodes.Frame008.geometry}
-					material={materials['Matte Light Gray']}
-				/>
-				<group name='Hardware002'>
-					<mesh
-						name='Mesh134'
-						geometry={nodes.Mesh134.geometry}
-						material={materials['Chrome.001']}
-					/>
-					<mesh
-						name='Mesh134_1'
-						geometry={nodes.Mesh134_1.geometry}
-						material={materials['Matte Light Gray']}
-					/>
-				</group>
-				<mesh
-					name='Mesh'
-					geometry={nodes.Mesh.geometry}
-					material={materials.Mesh}
-				/>
-				<mesh
-					name='Wire003'
-					geometry={nodes.Wire003.geometry}
-					material={materials['Matte Black']}
-				/>
-			</group>
 			<mesh
 				name='BFUTR_2025'
+				castShadow
+				receiveShadow
 				geometry={nodes.BFUTR_2025.geometry}
 				material={materials['BFUTR 2025']}
 				position={[0.675, 0.732, 0.522]}
 				rotation={[0, -1.571, 0]}
 				scale={0.279}
-			/>
-			<mesh
-				name='Text'
-				geometry={nodes.Text.geometry}
-				material={nodes.Text.material}
-				position={[0.606, 0.775, 0.493]}
-				rotation={[0, -Math.PI / 2, 0]}
-				scale={0.02}
-			/>
-			<mesh
-				name='Cube002'
-				geometry={nodes.Cube002.geometry}
-				material={materials['Material.014']}
-				position={[0.629, 0.483, 0.52]}
-				rotation={[0, 1.571, 0]}
-				scale={[0.041, 0.016, 0.059]}
-			/>
-			<mesh
-				name='Cylinder006'
-				geometry={nodes.Cylinder006.geometry}
-				material={nodes.Cylinder006.material}
-				position={[0.666, 0.756, 0.52]}
-				rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
-				scale={[0.01, 0.003, 0.01]}
 			/>
 			<group
 				name='Monitor'
@@ -93,23 +20,28 @@ export default function OfficeEquipment({ nodes, materials }) {
 				scale={0.027}
 			>
 				<mesh
-					name='Text001'
-					geometry={nodes.Text001.geometry}
+					name='Brand Logo'
+					castShadow
+					receiveShadow
+					geometry={nodes.Brand_1.geometry}
 					material={materials['Material.015']}
 				/>
 				<mesh
-					name='Text001_1'
-					geometry={nodes.Text001_1.geometry}
+					name='Monitor Stand'
+					castShadow
+					receiveShadow
+					geometry={nodes.Brand_2.geometry}
 					material={materials['Material.010']}
 				/>
 				<mesh
-					name='Text001_2'
-					geometry={nodes.Text001_2.geometry}
+					name='Brand_3'
+					castShadow
+					geometry={nodes.Brand_3.geometry}
 					material={materials['Material.009']}
 				/>
 				<mesh
-					name='Text001_3'
-					geometry={nodes.Text001_3.geometry}
+					name='Brand_4'
+					geometry={nodes.Brand_4.geometry}
 					material={materials.VSCode}
 				/>
 			</group>
@@ -121,66 +53,190 @@ export default function OfficeEquipment({ nodes, materials }) {
 			>
 				<mesh
 					name='Text002'
+					castShadow
+					receiveShadow
 					geometry={nodes.Text002.geometry}
 					material={materials['Material.018']}
 				/>
 				<mesh
 					name='Text002_1'
+					castShadow
+					receiveShadow
 					geometry={nodes.Text002_1.geometry}
 					material={materials['Material.017']}
 				/>
 				<mesh
 					name='Text002_2'
+					castShadow
+					receiveShadow
 					geometry={nodes.Text002_2.geometry}
 					material={materials.PowerLight}
 				/>
 				<mesh
 					name='Text002_3'
+					castShadow
+					receiveShadow
 					geometry={nodes.Text002_3.geometry}
 					material={materials['Material.016']}
 				/>
 			</group>
-			<group
-				name='TableSupportBack'
-				position={[1.17, 0.014, -0.957]}
-				rotation={[-Math.PI, 0, -Math.PI]}
-				scale={[0.045, 0.01, 0.045]}
-			>
+			<group name='Aeron_Office_Chair' rotation={[0, 1.571, 0]}>
 				<mesh
-					name='Cylinder002'
-					geometry={nodes.Cylinder002.geometry}
-					material={materials['Material.006']}
+					name='Arm'
+					castShadow
+					receiveShadow
+					geometry={nodes.Arm.geometry}
+					material={materials['Matte Light Gray']}
 				/>
 				<mesh
-					name='Cylinder002_1'
-					geometry={nodes.Cylinder002_1.geometry}
-					material={materials['Material.005']}
+					name='Base002'
+					castShadow
+					receiveShadow
+					geometry={nodes.Base002.geometry}
+					material={materials['Matte Light Gray']}
+				/>
+				<mesh
+					name='Caster'
+					castShadow
+					receiveShadow
+					geometry={nodes.Caster.geometry}
+					material={materials['Matte Black']}
+					position={[-0.195, 0.064, 0.268]}
+				/>
+				<mesh
+					name='Frame008'
+					castShadow
+					receiveShadow
+					geometry={nodes.Frame008.geometry}
+					material={materials['Matte Light Gray']}
+				/>
+				<group name='Hardware002'>
+					<mesh
+						name='Mesh134'
+						castShadow
+						receiveShadow
+						geometry={nodes.Mesh134.geometry}
+						material={materials['Chrome.001']}
+					/>
+					<mesh
+						name='Mesh134_1'
+						castShadow
+						receiveShadow
+						geometry={nodes.Mesh134_1.geometry}
+						material={materials['Matte Light Gray']}
+					/>
+				</group>
+				<mesh
+					name='Mesh'
+					castShadow
+					receiveShadow
+					geometry={nodes.Mesh.geometry}
+					material={materials.Mesh}
+				/>
+				<mesh
+					name='Wire003'
+					castShadow
+					receiveShadow
+					geometry={nodes.Wire003.geometry}
+					material={materials['Matte Black']}
 				/>
 			</group>
-			<group
-				name='TableSupportFront'
-				position={[1.17, 0.014, 0.958]}
-				rotation={[-Math.PI, 0, -Math.PI]}
-				scale={[0.045, 0.01, 0.045]}
-			>
+			<group name='officeTable'>
+				<group
+					name='TableSupportBack'
+					position={[1.17, 0.014, -0.957]}
+					rotation={[-Math.PI, 0, -Math.PI]}
+					scale={[0.045, 0.01, 0.045]}
+				>
+					<mesh
+						name='Cylinder002'
+						castShadow
+						receiveShadow
+						geometry={nodes.Cylinder002.geometry}
+						material={materials.Adjuster}
+					/>
+					<mesh
+						name='Cylinder002_1'
+						castShadow
+						receiveShadow
+						geometry={nodes.Cylinder002_1.geometry}
+						material={materials['Material.005']}
+					/>
+				</group>
+				<group
+					name='TableSupportFront'
+					position={[1.17, 0.014, 0.958]}
+					rotation={[-Math.PI, 0, -Math.PI]}
+					scale={[0.045, 0.01, 0.045]}
+				>
+					<mesh
+						name='Cylinder001'
+						castShadow
+						receiveShadow
+						geometry={nodes.Cylinder001.geometry}
+						material={materials.Adjuster}
+					/>
+					<mesh
+						name='Cylinder001_1'
+						castShadow
+						receiveShadow
+						geometry={nodes.Cylinder001_1.geometry}
+						material={materials['Material.005']}
+					/>
+				</group>
 				<mesh
-					name='Cylinder001'
-					geometry={nodes.Cylinder001.geometry}
-					material={materials['Material.006']}
-				/>
-				<mesh
-					name='Cylinder001_1'
-					geometry={nodes.Cylinder001_1.geometry}
-					material={materials['Material.005']}
+					name='TableTop'
+					castShadow
+					receiveShadow
+					geometry={nodes.TableTop.geometry}
+					material={materials['Material.003']}
+					position={[0.8, 0.711, 0]}
+					scale={[0.462, 0.01, 1]}
 				/>
 			</group>
-			<mesh
-				name='TableTop'
-				geometry={nodes.TableTop.geometry}
-				material={materials['Material.003']}
-				position={[0.8, 0.711, 0]}
-				scale={[0.462, 0.01, 1]}
-			/>
+			<group name='mouse'>
+				<mesh
+					name='Mouse'
+					castShadow
+					receiveShadow
+					geometry={nodes.Mouse.geometry}
+					material={materials['Material.014']}
+					position={[0.629, 0.483, 0.52]}
+					rotation={[0, 1.571, 0]}
+					scale={[0.041, 0.016, 0.059]}
+				/>
+				<mesh
+					name='MouseWheel'
+					castShadow
+					receiveShadow
+					geometry={nodes.MouseWheel.geometry}
+					material={nodes.MouseWheel.material}
+					position={[0.666, 0.756, 0.52]}
+					rotation={[-Math.PI / 2, -Math.PI / 2, 0]}
+					scale={[0.01, 0.003, 0.01]}
+				/>
+				<mesh
+					name='Text001'
+					castShadow
+					receiveShadow
+					geometry={nodes.Text001.geometry}
+					material={materials.Brand}
+					position={[0.75, 0.769, -0.016]}
+					rotation={[Math.PI / 2, -1.501, Math.PI / 2]}
+					scale={[0.017, 0.017, 0.014]}
+				/>
+
+				<mesh
+					name='Brand'
+					castShadow
+					receiveShadow
+					geometry={nodes.Brand.geometry}
+					material={nodes.Brand.material}
+					position={[0.606, 0.774, 0.493]}
+					rotation={[0, -Math.PI / 2, 0]}
+					scale={0.02}
+				/>
+			</group>
 		</>
 	);
 }

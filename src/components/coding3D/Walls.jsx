@@ -4,34 +4,47 @@ export default function Walls({ nodes, materials }) {
 	return (
 		<>
 			<group
-				name='Cube'
+				name='Walls'
 				position={[-1.89, 1.46, 0]}
 				rotation={[-Math.PI, 0, 0]}
 				scale={[-0.088, -1.45, -1.857]}
 			>
 				<mesh
-					name='Cube_1'
-					geometry={nodes.Cube_1.geometry}
+					name='Cube'
+					castShadow
+					receiveShadow
+					geometry={nodes.Cube.geometry}
 					material={materials['Wallbase.002']}
 				/>
 				<mesh
-					name='Cube_2'
-					geometry={nodes.Cube_2.geometry}
+					name='Cube_1'
+					// castShadow
+					receiveShadow
+					geometry={nodes.Cube_1.geometry}
 					material={materials['WallInterior.002']}
-				/>
+				>
+					<meshStandardMaterial color={0x777777} />
+				</mesh>
 				<mesh
-					name='Cube_3'
-					geometry={nodes.Cube_3.geometry}
+					name='Cube_2'
+					castShadow
+					receiveShadow
+					geometry={nodes.Cube_2.geometry}
 					material={materials['WallExterior.002']}
 				/>
 				<mesh
-					name='Cube_4'
-					geometry={nodes.Cube_4.geometry}
+					name='Cube_3'
+					castShadow
+					receiveShadow
+					geometry={nodes.Cube_3.geometry}
 					material={materials['WallExterior.003']}
 				/>
 			</group>
+
 			<mesh
 				name='WindowFrame'
+				castShadow
+				receiveShadow
 				geometry={nodes.WindowFrame.geometry}
 				material={materials['Material.001']}
 				position={[-1.907, 1.65, -0.125]}
@@ -40,6 +53,8 @@ export default function Walls({ nodes, materials }) {
 			/>
 			<mesh
 				name='WindowInterior'
+				castShadow
+				receiveShadow
 				geometry={nodes.WindowInterior.geometry}
 				material={materials['Material.004']}
 				position={[-1.921, 1.657, -0.129]}
@@ -48,6 +63,8 @@ export default function Walls({ nodes, materials }) {
 			/>
 			<mesh
 				name='Baseboard'
+				castShadow
+				receiveShadow
 				geometry={nodes.Baseboard.geometry}
 				material={materials['Material.013']}
 				position={[0.073, 0.089, -1.671]}
@@ -56,6 +73,8 @@ export default function Walls({ nodes, materials }) {
 			/>
 			<mesh
 				name='Baseboard2'
+				castShadow
+				receiveShadow
 				geometry={nodes.Baseboard2.geometry}
 				material={materials['Material.013']}
 				position={[-1.793, 0.09, 0.079]}
