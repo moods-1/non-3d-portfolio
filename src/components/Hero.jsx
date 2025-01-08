@@ -45,13 +45,16 @@ const Hero = () => {
 		if (value >= 100) setLoadComplete(true);
 	};
 
+	const handleSwipe = () => setCanvasClicked(true);
+
 	return (
 		<div className='h-screen w-full relative'>
 			{showSwipe ? <Swipe /> : null}
 			<Canvas
 				shadows
 				camera={{ position: [0, 0, 8], fov: 34 }}
-				onMouseDown={() => setCanvasClicked(true)}
+				onMouseDown={handleSwipe}
+				onTouchStart={handleSwipe}
 			>
 				<ambientLight color={0xffffff} intensity={1.2} />
 				<directionalLight
