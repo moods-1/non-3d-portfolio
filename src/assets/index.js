@@ -29,6 +29,7 @@ import ThreeJS from './skills/three-js.png';
 import Blender from './skills/blender.png';
 
 import ramani from './company/ramani-icon.png';
+import L3 from './company/L3.png';
 import webflix from './webflix.png';
 import dashboard from './dashboard.png';
 import moodsU from './moods-u.png';
@@ -47,6 +48,7 @@ export {
 	menu,
 	close,
 	ramani,
+	L3,
 	HTML,
 	CSS,
 	JavaScript,
