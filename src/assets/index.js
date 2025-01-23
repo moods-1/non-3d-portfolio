@@ -30,6 +30,7 @@ import Blender from './skills/blender.png';
 
 import ramani from './company/ramani-icon.png';
 import L3 from './company/L3.png';
+import BeyondWeb from './company/beyondWebLogo.png';
 import webflix from './webflix.png';
 import dashboard from './dashboard.png';
 import moodsU from './moods-u.png';
@@ -49,6 +50,7 @@ export {
 	close,
 	ramani,
 	L3,
+	BeyondWeb,
 	HTML,
 	CSS,
 	JavaScript,

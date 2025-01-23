@@ -2,6 +2,7 @@ import {
 	Tailwind,
 	ramani,
 	L3,
+	BeyondWeb,
 	HTML,
 	CSS,
 	JavaScript,
@@ -76,6 +77,22 @@ const services = [
 ];
 
 const experiences = [
+	{
+		title: 'React Three Fiber Developer',
+		companyName: 'BeyondWeb Technologies',
+		companyNameColor: 'text-white',
+		companyLocation: 'Brampton, ON',
+		workType: 'Remote',
+		icon: BeyondWeb,
+		iconBg: '#383E56',
+		date: 'Oct 2024 - Jan 2025',
+		points: [
+			'Created and optimized 3D models in Blender, implementing custom shaders and materials for enhanced realism',
+			'Developed interactive 3D experiences using React Three Fiber and integrated Blender models into React.',
+			'Generated user interfaces within 3D environments, ensuring smooth performance and responsiveness across devices',
+			'Created an interactive 3D tour of a virtual art gallery, which featured realistic lighting',
+		],
+	},
 	{
 		title: 'Full Stack Developer',
 		companyName: 'Ramani Corporation',
