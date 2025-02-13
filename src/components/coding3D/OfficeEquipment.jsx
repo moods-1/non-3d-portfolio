@@ -212,7 +212,7 @@ export default function OfficeEquipment({ nodes, materials }) {
 					/>
 				</mesh>
 			</group>
-			<group name='mouse'>
+			<group name='mouse' position={[0,-0.025,0]}>
 				<mesh
 					name='Mouse'
 					castShadow

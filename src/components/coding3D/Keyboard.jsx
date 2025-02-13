@@ -5,7 +5,7 @@ export default function Keyboard({ nodes, materials }) {
 		<>
 			<group
 				name='Keyboard'
-				position={[0.659, 0.751, 0.015]}
+				position={[0.659, 0.741, 0.015]}
 				rotation={[0, 0, 0.07]}
 				scale={[0.115, 0.01, 0.357]}
 			>
