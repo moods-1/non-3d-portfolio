@@ -1,7 +1,6 @@
 import {
 	Tailwind,
 	ramani,
-	L3,
 	BeyondWeb,
 	HTML,
 	CSS,
@@ -31,6 +30,7 @@ import {
 	mbank,
 	ThreeJS,
 	Blender,
+	Relay
 } from '../assets';
 
 export const navLinks = {
@@ -78,13 +78,27 @@ const services = [
 
 const experiences = [
 	{
+		title: 'Front End Devloper',
+		companyName: 'Relay Financial Technologies Inc.',
+		companyNameColor: 'text-[#004822]',
+		companyLocation: 'Toronto, ON',
+		workType: 'Hybrid',
+		icon: Relay,
+		iconBg: '#004822',
+		date: 'Mar 2025 - current',
+		points: [
+			'Work closely with the marketing, design and engineering teams to drive Relay’s 2025 website re-design.',
+			'Develop high-quality, accessible, and visually striking web experiences.'
+		],
+	},
+	{
 		title: 'React Three Fiber Developer',
 		companyName: 'BeyondWeb Technologies',
 		companyNameColor: 'text-white',
 		companyLocation: 'Brampton, ON',
 		workType: 'Remote',
 		icon: BeyondWeb,
-		iconBg: '#383E56',
+		iconBg: '#000000',
 		date: 'Oct 2024 - Jan 2025',
 		points: [
 			'Created and optimized 3D models in Blender, implementing custom shaders and materials for enhanced realism',
@@ -100,7 +114,7 @@ const experiences = [
 		companyLocation: 'Dar Es Salaam, TZ',
 		workType: 'Remote',
 		icon: ramani,
-		iconBg: '#383E56',
+		iconBg: '#000000',
 		date: 'Apr 2021 - Jun 2023',
 		points: [
 			'Managed a supply chain management SaaS program for over 100 micro-distribution centers (MDCs), enabling real-time management of procurement, inventory, and POS activities, reducing operational costs by 10%',
@@ -111,23 +125,7 @@ const experiences = [
 			'Conducted code/pull request reviews to ensure high-quality code and adherence to best practices',
 			'Refactored the application to improve performance, SEO, and best practice scores, while, leading to a 15% increase in application speed',
 		],
-	},
-	{
-		title: 'Test Engineering Specialist',
-		companyName: 'L3 Technologies',
-		companyNameColor: 'text-red-600',
-		companyLocation: 'Toronto, ON',
-		workType: 'On-site',
-		icon: L3,
-		iconBg: '#ffffff',
-		date: 'Jan 2014 - Oct 2020',
-		points: [
-			'Implemented software and hardware modifications, calibration, and repair, enhancing system performance and reducing maintenance costs by 10%',
-			'Created Capital Expenditure Requests and Purchase Requisitions for spare parts and system upgrades, optimizing budget allocation and reducing downtime by 20%',
-			'Prepared and amended test procedures and work instructions, improving testing efficiency by 15%',
-			'Through the analysis of current practices and detailed reporting on the results of implemented procedures, I identified opportunities for continuous improvement in efficiency and reliability',
-		],
-	},
+	}
 ];
 
 const testimonials = [
