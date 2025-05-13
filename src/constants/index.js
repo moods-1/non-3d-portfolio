@@ -88,7 +88,8 @@ const experiences = [
 		date: 'Mar 2025 - current',
 		points: [
 			'Work closely with the marketing, design and engineering teams to drive Relay’s 2025 website re-design.',
-			'Develop high-quality, accessible, and visually striking web experiences.'
+			'Leverage Next.js, Figma, Jira, Git, CI/CD, and other industry-standard tools to streamline development workflows and deliver high-quality web solutions efficiently.',
+			'Perform code reviews.'
 		],
 	},
 	{
