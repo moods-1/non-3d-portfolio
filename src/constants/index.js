@@ -30,7 +30,7 @@ import {
 	mbank,
 	ThreeJS,
 	Blender,
-	Relay
+	Relay,
 } from '../assets';
 
 export const navLinks = {
@@ -87,9 +87,14 @@ const experiences = [
 		iconBg: '#004822',
 		date: 'Mar 2025 - current',
 		points: [
-			'Work closely with the marketing, design and engineering teams to drive Relay’s 2025 website re-design.',
-			'Leverage Next.js, Figma, Jira, Git, CI/CD, and other industry-standard tools to streamline development workflows and deliver high-quality web solutions efficiently.',
-			'Perform code reviews.'
+			'Spearhead a frontend infrastructure overhaul delivering a 56% performance improvement across build pipelines and asset delivery.',
+			'Manage AWS infrastructure (S3, Amplify, CloudFront) with Terraform/Terragrunt, implementing cache invalidation, redirects, and serverless functions.',
+			'Lead website redesign with Marketing and Design teams, improving SEO and AEO to boost organic and AI-driven search visibility.',
+			'Build and integrate HubSpot forms via API and embedded scripts, connecting marketing automation directly to frontend workflows.',
+			'Integrate Contentful CMS to decouple content from deployments, reducing editor time-to-publish.',
+			'Develop modern web apps using Next.js, TypeScript, GSAP, Motion, Tailwind, and SASS.',
+			'Conduct code reviews and enforce best practices across TypeScript and component architecture.',
+			'Manage delivery workflows with Git, Jira, and CI/CD pipelines to ensure consistent release cadences.',
 		],
 	},
 	{
@@ -126,7 +131,7 @@ const experiences = [
 			'Conducted code/pull request reviews to ensure high-quality code and adherence to best practices',
 			'Refactored the application to improve performance, SEO, and best practice scores, while, leading to a 15% increase in application speed',
 		],
-	}
+	},
 ];
 
 const testimonials = [
