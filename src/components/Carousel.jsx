@@ -126,9 +126,10 @@ export function Carousel({
 	const atEnd = !loop && index === count - 1;
 
 	const buttonClass = cn(
-		'flex h-10 w-10 items-center justify-center',
+		'flex h-10 w-10 items-center justify-center will-change-transform',
 		'rounded-full border border-gray-200 bg-white text-gray-700',
-		'shadow-md transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40',
+		'transition hover:bg-transparent hover:text-white text-md',
+		'disabled:cursor-not-allowed disabled:opacity-40',
 	);
 	return (
 		<div
