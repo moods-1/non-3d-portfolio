@@ -10,14 +10,14 @@ export default function ProjectCard({
 	source_code_link,
 }) {
   return (
-    <div className='sm:mr-10'>
-			<div className='bg-black p-5 rounded-md max-w-[360px] w-full select-none border border-slate-700 hover:scale-105 hover:shadow-lg hover:shadow-slate-600 transition-all duration-500'>
+    <div className='h-full'>
+			<div className='bg-black p-5 rounded-md h-[492px] max-w-[360px] w-full select-none border border-slate-700 transition-all duration-500'>
 				<div className='relative w-full h-[230px]'>
 					<a href={url} target='_blank' rel='noreferrer'>
 						<img
 							src={image}
 							alt='project_image'
-							className='w-full h-full object-contain sm:object-cover rounded-md cursor-pointer'
+							className='w-full h-full object-cover object-center rounded-md cursor-pointer'
 						/>
 					</a>
 					<div className='absolute top-0 right-0 card-img_hover'>

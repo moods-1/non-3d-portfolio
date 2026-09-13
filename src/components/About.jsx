@@ -8,7 +8,7 @@ const About = () => {
 		<main id='about' className='intersector'>
 			<section className='relative'>
 				<SectionHeader subText='Introduction' headText='Overview.' />
-				<p className='mt-4 text-gray-300 text-[17px] max-w-3xl leading-[30px]'>
+				<p className='subheader'>
 					I'm a skilled software developer with experience in TypeScript and
 					JavaScript, and expertise in frameworks like React, Node.js, and
 					Three.js. I'm a quick learner and can collaborate closely with clients

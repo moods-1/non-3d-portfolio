@@ -225,3 +225,6 @@ section {
 .action-button:hover::before {
 	width: 100%;
 }
+.subheader {
+	@apply text-sm md:text-base leading-normal mt-4 text-gray-300 max-w-3xl;
+}
