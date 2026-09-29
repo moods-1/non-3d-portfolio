@@ -78,7 +78,7 @@ const services = [
 
 const experiences = [
 	{
-		title: 'Front End Devloper',
+		title: 'Sr. Marketing Engineer/FE Developer',
 		companyName: 'Relay Financial Technologies Inc.',
 		companyNameColor: 'text-[#004822]',
 		companyLocation: 'Toronto, ON',
@@ -102,7 +102,7 @@ const experiences = [
 		companyName: 'BeyondWeb Technologies',
 		companyNameColor: 'text-white',
 		companyLocation: 'Brampton, ON',
-		workType: 'Remote',
+		workType: 'Remote - Internship',
 		icon: BeyondWeb,
 		iconBg: '#000000',
 		date: 'Oct 2024 - Jan 2025',
